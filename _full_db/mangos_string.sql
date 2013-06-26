@@ -362,7 +362,6 @@ INSERT INTO `mangos_string` (`entry`, `content_default`, `content_loc1`, `conten
 (368,'Required Items:',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (369,'Required quest:',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (370,'Required heroic keys:',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-(371,'Required quest (heroic difficulty):',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (373,'Response:\n%s ',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (374,'Tickets count: %i\n',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (375,'Player %s not have tickets.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),

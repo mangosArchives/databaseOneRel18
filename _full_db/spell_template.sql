@@ -78,7 +78,10 @@ INSERT INTO `spell_template` (`id`, `proc_flags`, `proc_chance`, `duration_index
 (45158,0,101,21,6,1,0,56,25119,0,0,'Model - Shattered Sun Warrior - BE Female Tier 4'),
 (45162,0,101,21,6,1,0,56,25123,0,0,'Model - Shattered Sun Warrior - BE Male Tier 4'),
 (45166,0,101,21,6,1,0,56,25127,0,0,'Model - Shattered Sun Warrior - Draenei Female Tier 4'),
-(45170,0,101,21,6,1,0,56,25131,0,0,'Model - Shattered Sun Warrior - Draenei Male Tier 4');
+(45170,0,101,21,6,1,0,56,25131,0,0,'Model - Shattered Sun Warrior - Draenei Male Tier 4'),
+(37264,0,101,21,28,18,7,0,21729,64,0,'Power Converters: Summon Electromental (from cata)'),
+(37278,0,101,21,28,18,1,0,21737,64,0,'Power Converters: Summon Mini-Electromental (from cata)'),
+(37365,0,101,21,28,18,1,0,21757,64,0,'Power Converters: Summon Big Flavor Electromental (from cata)');
 /*!40000 ALTER TABLE `spell_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
