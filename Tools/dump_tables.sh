@@ -122,7 +122,7 @@ reputation_reward_rate \
 reputation_spillover_template \
 reserved_name \
 scripted_areatrigger \
-scripted_event_id \
+scripted_event \
 skill_discovery_template \
 skill_extra_item_template \
 skill_fishing_base_level \
@@ -148,7 +148,7 @@ echo "Dumping ${i}/127 ${TABLE}..."
 
 echo "--
 -- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2009-2014 MaNGOSZero <https://github.com/mangosone>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
