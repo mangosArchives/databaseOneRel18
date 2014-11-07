@@ -37,7 +37,7 @@ CREATE TABLE `db_version` (
 LOCK TABLES `db_version` WRITE;
 /*!40000 ALTER TABLE `db_version` DISABLE KEYS */;
 INSERT INTO `db_version` VALUES
-('Mangos default database.','Creature EventAI not provided.',NULL);
+('Mangos One database.','Creature EventAI not provided.',NULL);
 /*!40000 ALTER TABLE `db_version` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -676,11 +676,11 @@ INSERT INTO `command` VALUES
 ('npc subname',2,'Syntax: .npc subname $Name\r\n\r\nChange the subname of the selected creature or player to $Name.\r\n\r\nCommand disabled.'),
 ('npc tame',2,'Syntax: .npc tame\r\n\r\nTame selected creature (tameable non pet creature). You don''t must have pet.'),
 ('npc textemote',1,'Syntax: .npc textemote #emoteid\r\n\r\nMake the selected creature to do textemote with an emote of id #emoteid.'),
-('npc whisper',1,'Syntax: .npc whisper #playerguid #text\r\nMake the selected npc whisper #text to  #playerguid.'),
 ('npc unfollow',2,'Syntax: .npc unfollow\r\n\r\nSelected creature (non pet) stop follow you.'),
+('npc whisper',1,'Syntax: .npc whisper #playerguid #text\r\nMake the selected npc whisper #text to  #playerguid.'),
 ('npc yell', 1, 'Syntax: .npc yell #text\r\nMake the selected npc yells #text.'),
-('pdump write',3,'Syntax: .pdump write $filename $playerNameOrGUID\r\nWrite character dump with name/guid $playerNameOrGUID to file $filename.'),
 ('pdump load',3,'Syntax: .pdump load $filename $account [$newname] [$newguid]\r\nLoad character dump from dump file into character list of $account with saved or $newname, with saved (or first free) or $newguid guid.'),
+('pdump write',3,'Syntax: .pdump write $filename $playerNameOrGUID\r\nWrite character dump with name/guid $playerNameOrGUID to file $filename.'),
 ('pinfo',2,'Syntax: .pinfo [$player_name]\r\n\r\nOutput account information for selected player or player find by $player_name.'),
 ('pool',2,'Syntax: .pool #pool_id\r\n\r\nPool information and full list creatures/gameobjects included in pool.'),
 ('pool list',2,'Syntax: .pool list\r\n\r\nList of pools with spawn in current map (only work in instances. Non-instanceable maps share pool system state os useless attempt get all pols at all continents.'),
@@ -698,8 +698,8 @@ INSERT INTO `command` VALUES
 ('reload all_loot',3,'Syntax: .reload all_loot\r\n\r\nReload all `*_loot_template` tables. This can be slow operation with lags for server run.'),
 ('reload all_npc',3,'Syntax: .reload all_npc\r\n\r\nReload `points_of_interest` and `npc_*` tables if reload support added for these tables and these tables can be _safe_ reloaded.'),
 ('reload all_quest',3,'Syntax: .reload all_quest\r\n\r\nReload all quest related tables if reload support added for this table and this table can be _safe_ reloaded.'),
-('reload all_spell',3,'Syntax: .reload all_spell\r\n\r\nReload all `spell_*` tables with reload support added and that can be _safe_ reloaded.'),
 ('reload all_scripts',3,'Syntax: .reload all_scripts\r\n\r\nReload `dbscripts_on_*` tables.'),
+('reload all_spell',3,'Syntax: .reload all_spell\r\n\r\nReload all `spell_*` tables with reload support added and that can be _safe_ reloaded.'),
 ('reload config',3,'Syntax: .reload config\r\n\r\nReload config settings (by default stored in mangosd.conf). Not all settings can be change at reload: some new setting values will be ignored until restart, some values will applied with delay or only to new objects/maps, some values will explicitly rejected to change at reload.'),
 ('repairitems',2,'Syntax: .repairitems\r\n\r\nRepair all selected player''s items.'),
 ('reset all',3,'Syntax: .reset all spells\r\n\r\nSyntax: .reset all talents\r\n\r\nRequest reset spells or talents at next login each existed character.'),
@@ -721,11 +721,11 @@ INSERT INTO `command` VALUES
 ('send money','3','Syntax: .send money #playername "#subject" "#text" #money\r\n\r\nSend mail with money to a player. Subject and mail text must be in "".'),
 ('server corpses',2,'Syntax: .server corpses\r\n\r\nTriggering corpses expire check in world.'),
 ('server exit',4,'Syntax: .server exit\r\n\r\nTerminate mangosd NOW. Exit code 0.'),
-('server info',0,'Syntax: .server info\r\n\r\nDisplay server version and the number of connected players.'),
-('server idleshutdown',3,'Syntax: .server idleshutdown #delay [#exist_code]\r\n\r\nShut the server down after #delay seconds if no active connections are present (no players). Use #exist_code or 0 as program exist code.'),
-('server idleshutdown cancel',3,'Syntax: .server idleshutdown cancel\r\n\r\nCancel the restart/shutdown timer if any.'),
 ('server idlerestart',3,'Syntax: .server idlerestart #delay\r\n\r\nRestart the server after #delay seconds if no active connections are present (no players). Use #exist_code or 2 as program exist code.'),
 ('server idlerestart cancel',3,'Syntax: .server idlerestart cancel\r\n\r\nCancel the restart/shutdown timer if any.'),
+('server idleshutdown',3,'Syntax: .server idleshutdown #delay [#exist_code]\r\n\r\nShut the server down after #delay seconds if no active connections are present (no players). Use #exist_code or 0 as program exist code.'),
+('server idleshutdown cancel',3,'Syntax: .server idleshutdown cancel\r\n\r\nCancel the restart/shutdown timer if any.'),
+('server info',0,'Syntax: .server info\r\n\r\nDisplay server version and the number of connected players.'),
 ('server log filter',4,'Syntax: .server log filter [($filtername|all) (on|off)]\r\n\r\nShow or set server log filters. If used "all" then all filters will be set to on/off state.'),
 ('server log level',4,'Syntax: .server log level [#level]\r\n\r\nShow or set server log level (0 - errors only, 1 - basic, 2 - detail, 3 - debug).'),
 ('server motd',0,'Syntax: .server motd\r\n\r\nShow server Message of the day.'),
@@ -746,15 +746,11 @@ INSERT INTO `command` VALUES
 ('tele del',3,'Syntax: .tele del $name\r\n\r\nRemove location with name $name for .tele command locations list.'),
 ('tele group',1,'Syntax: .tele group #location\r\n\r\nTeleport a selected player and his group members to a given location.'),
 ('tele name',1,'Syntax: .tele name [#playername] #location\r\n\r\nTeleport the given character to a given location. Character can be offline.'),
-<<<<<<< HEAD
 ('ticket',2,'Syntax: .ticket on\r\n        .ticket off\r\n        .ticket system_on\r\n        .ticket system_off\r\n        .ticket #num\r\n        .ticket $character_name\r\n        .ticket respond #num $response\r\n        .ticket respond $character_name $response\r\n        .ticket close $character_name\r\n        .ticket close #num\r\n        .ticket close_survey #num\r\n        .ticket close_survey $character_name\r\n\r\non/off for GMs to show or not a new ticket directly, $character_name to show ticket of this character, #num to show ticket #num, close to close the given ticket, close_survey to close the given ticket and have the player answer a survey about the gm, system_on/off to globally turn off accepting tickets, will show a message to the client if off that you cant file a ticket if off'),
 ('titles add',2,'Syntax: .titles add #title\r\nAdd title #title (id or shift-link) to known titles list for selected player.'),
 ('titles current',2,'Syntax: .titles current #title\r\nSet title #title (id or shift-link) as current selected titl for selected player. If title not in known title list for player then it will be added to list.'),
 ('titles remove',2,'Syntax: .titles remove #title\r\nRemove title #title (id or shift-link) from known titles list for selected player.'),
 ('titles setmask',2,'Syntax: .titles setmask #mask\r\n\r\nAllows user to use all titles from #mask.\r\n\r\n #mask=0 disables the title-choose-field'),
-=======
-('ticket',2,'Syntax: .ticket on\r\n        .ticket off\r\n        .ticket system_on\r\n        .ticket system_off\r\n        .ticket #num\r\n        .ticket $character_name\r\n        .ticket respond/response/whisper #num $response\r\n        .ticket respond/response/whisper $character_name $response\r\n        .ticket close $character_name\r\n        .ticket close #num\r\n        .ticket close_survey #num\r\n        .ticket close_survey $character_name\r\n\r\non/off for GMs to show or not a new ticket directly, $character_name to show ticket of this character, #num to show ticket #num, close to close the given ticket, close_survey to close the given ticket and have the player answer a survey about the gm, system_on/off to globally turn off accepting tickets, will show a message to the client if off that you cant file a ticket if off'),
->>>>>>> e1cd703... 19003 [Core] Update to ticket handling and hopefully a fix to logging
 ('trigger',2,'Syntax: .trigger [#trigger_id|$trigger_shift-link|$trigger_target_shift-link]\r\n\r\nShow detail infor about areatrigger with id #trigger_id or trigger id associated with shift-link. If areatrigger id or shift-link not provided then selected nearest areatrigger at current map.'),
 ('trigger active',2,'Syntax: .trigger active\r\n\r\nShow list of areatriggers with activation zone including current character position.'),
 ('trigger near',2,'Syntax: .trigger near [#distance]\r\n\r\nOutput areatriggers at distance #distance from player. If #distance not provided use 10 as default value.'),
@@ -784,17 +780,18 @@ DROP TABLE IF EXISTS `conditions`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `conditions` (
   `condition_entry` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Identifier',
-  `type` tinyint(3) signed NOT NULL DEFAULT '0' COMMENT 'Type of the condition',
+  `type` tinyint(3) NOT NULL DEFAULT '0' COMMENT 'Type of the condition',
   `value1` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'data field one for the condition',
   `value2` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'data field two for the condition',
   PRIMARY KEY (`condition_entry`),
-  CONSTRAINT unique_conditions UNIQUE (type,value1,value2)
+  UNIQUE KEY `unique_conditions` (`type`,`value1`,`value2`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Condition System';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `conditions`
 --
+
 LOCK TABLES `conditions` WRITE;
 /*!40000 ALTER TABLE `conditions` DISABLE KEYS */;
 /*!40000 ALTER TABLE `conditions` ENABLE KEYS */;
@@ -867,6 +864,119 @@ CREATE TABLE `creature_addon` (
 LOCK TABLES `creature_addon` WRITE;
 /*!40000 ALTER TABLE `creature_addon` DISABLE KEYS */;
 /*!40000 ALTER TABLE `creature_addon` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `creature_ai_scripts`
+--
+
+DROP TABLE IF EXISTS `creature_ai_scripts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `creature_ai_scripts` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Identifier',
+  `creature_id` int(11) unsigned NOT NULL DEFAULT '0' COMMENT 'Creature Template Identifier',
+  `event_type` tinyint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Event Type',
+  `event_inverse_phase_mask` int(11) NOT NULL DEFAULT '0' COMMENT 'Mask which phases this event will not trigger in',
+  `event_chance` int(3) unsigned NOT NULL DEFAULT '100',
+  `event_flags` int(3) unsigned NOT NULL DEFAULT '0',
+  `event_param1` int(11) NOT NULL DEFAULT '0',
+  `event_param2` int(11) NOT NULL DEFAULT '0',
+  `event_param3` int(11) NOT NULL DEFAULT '0',
+  `event_param4` int(11) NOT NULL DEFAULT '0',
+  `action1_type` tinyint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Action Type',
+  `action1_param1` int(11) NOT NULL DEFAULT '0',
+  `action1_param2` int(11) NOT NULL DEFAULT '0',
+  `action1_param3` int(11) NOT NULL DEFAULT '0',
+  `action2_type` tinyint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Action Type',
+  `action2_param1` int(11) NOT NULL DEFAULT '0',
+  `action2_param2` int(11) NOT NULL DEFAULT '0',
+  `action2_param3` int(11) NOT NULL DEFAULT '0',
+  `action3_type` tinyint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Action Type',
+  `action3_param1` int(11) NOT NULL DEFAULT '0',
+  `action3_param2` int(11) NOT NULL DEFAULT '0',
+  `action3_param3` int(11) NOT NULL DEFAULT '0',
+  `comment` varchar(255) NOT NULL DEFAULT '' COMMENT 'Event Comment',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=576403 DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='EventAI Scripts';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `creature_ai_scripts`
+--
+
+LOCK TABLES `creature_ai_scripts` WRITE;
+/*!40000 ALTER TABLE `creature_ai_scripts` DISABLE KEYS */;
+INSERT INTO `creature_ai_scripts` VALUES
+(576401,5764,4,0,100,2,0,0,0,0,1,-5764,0,0,0,0,0,0,0,0,0,0,'Guardian of Blizzard - Yell at character'),
+(576402,5764,0,0,50,1,4000,14100,38000,42000,11,5,0,0,0,0,0,0,0,0,0,0,'Guardian of Blizzard - Cast Death Touch on character');
+/*!40000 ALTER TABLE `creature_ai_scripts` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `creature_ai_summons`
+--
+
+DROP TABLE IF EXISTS `creature_ai_summons`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `creature_ai_summons` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Location Identifier',
+  `position_x` float NOT NULL DEFAULT '0',
+  `position_y` float NOT NULL DEFAULT '0',
+  `position_z` float NOT NULL DEFAULT '0',
+  `orientation` float NOT NULL DEFAULT '0',
+  `spawntimesecs` int(11) unsigned NOT NULL DEFAULT '120',
+  `comment` varchar(255) NOT NULL DEFAULT '' COMMENT 'Summon Comment',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='EventAI Summoning Locations';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `creature_ai_summons`
+--
+
+LOCK TABLES `creature_ai_summons` WRITE;
+/*!40000 ALTER TABLE `creature_ai_summons` DISABLE KEYS */;
+/*!40000 ALTER TABLE `creature_ai_summons` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `creature_ai_texts`
+--
+
+DROP TABLE IF EXISTS `creature_ai_texts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `creature_ai_texts` (
+  `entry` mediumint(8) NOT NULL,
+  `content_default` text NOT NULL,
+  `content_loc1` text,
+  `content_loc2` text,
+  `content_loc3` text,
+  `content_loc4` text,
+  `content_loc5` text,
+  `content_loc6` text,
+  `content_loc7` text,
+  `content_loc8` text,
+  `sound` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `type` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `language` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `emote` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `comment` text,
+  PRIMARY KEY (`entry`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Script Texts';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `creature_ai_texts`
+--
+
+LOCK TABLES `creature_ai_texts` WRITE;
+/*!40000 ALTER TABLE `creature_ai_texts` DISABLE KEYS */;
+INSERT INTO `creature_ai_texts` VALUES
+(-5764,'$N! THIS AREA IS OFF LIMITS!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Guardian of Blizzard - Yell at player');
+/*!40000 ALTER TABLE `creature_ai_texts` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -971,6 +1081,36 @@ LOCK TABLES `creature_involvedrelation` WRITE;
 /*!40000 ALTER TABLE `creature_involvedrelation` DISABLE KEYS */;
 /*!40000 ALTER TABLE `creature_involvedrelation` ENABLE KEYS */;
 UNLOCK TABLES;
+
+
+--
+-- Table structure for table `creature_item_template`
+--
+
+DROP TABLE IF EXISTS `creature_item_template`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `creature_item_template` (
+  `entry` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `class` tinyint(3) unsigned DEFAULT '0',
+  `subclass` tinyint(3) unsigned DEFAULT '0',
+  `material` mediumint(8) unsigned DEFAULT '0',
+  `displayid` mediumint(8) unsigned DEFAULT '0',
+  `inventory_type` tinyint(3) unsigned DEFAULT '0',
+  `sheath_type` tinyint(3) unsigned DEFAULT '0',
+  PRIMARY KEY (`entry`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Creature System (Equipment)';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `creature_item_template`
+--
+
+LOCK TABLES `creature_item_template` WRITE;
+/*!40000 ALTER TABLE `creature_item_template` DISABLE KEYS */;
+/*!40000 ALTER TABLE `creature_item_template` ENABLE KEYS */;
+UNLOCK TABLES;
+
 
 --
 -- Table structure for table `creature_linking`
@@ -1381,6 +1521,33 @@ LOCK TABLES `creature_template_addon` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `creature_template_classlevelstats`
+--
+
+DROP TABLE IF EXISTS `creature_template_classlevelstats`;
+
+CREATE TABLE `creature_template_classlevelstats` (
+  `Level` tinyint(4) NOT NULL,
+  `Class` tinyint(4) NOT NULL,
+  `BaseHealthExp0` mediumint(8) unsigned NOT NULL DEFAULT '1',
+  `BaseMana` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `BaseDamageExp0` float NOT NULL DEFAULT '0',
+  `BaseMeleeAttackPower` float NOT NULL DEFAULT '0',
+  `BaseRangedAttackPower` float NOT NULL DEFAULT '0',
+  `BaseArmor` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`Level`,`Class`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `creature_template_classlevelstats`
+--
+
+LOCK TABLES `creature_template_classlevelstats` WRITE;
+/*!40000 ALTER TABLE `creature_template_classlevelstats` DISABLE KEYS */;
+/*!40000 ALTER TABLE `creature_template_classlevelstats` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `creature_template_spells`
 --
 
@@ -1443,51 +1610,337 @@ LOCK TABLES `db_script_string` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `dbscripts_on_creature_death`
+--
+
+DROP TABLE IF EXISTS `dbscripts_on_creature_death`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `dbscripts_on_creature_death` (
+  `id` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `delay` int(10) unsigned NOT NULL DEFAULT '0',
+  `command` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `datalong` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `datalong2` int(10) unsigned NOT NULL DEFAULT '0',
+  `buddy_entry` int(10) unsigned NOT NULL DEFAULT '0',
+  `search_radius` int(10) unsigned NOT NULL DEFAULT '0',
+  `data_flags` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `dataint` int(11) NOT NULL DEFAULT '0',
+  `dataint2` int(11) NOT NULL DEFAULT '0',
+  `dataint3` int(11) NOT NULL DEFAULT '0',
+  `dataint4` int(11) NOT NULL DEFAULT '0',
+  `x` float NOT NULL DEFAULT '0',
+  `y` float NOT NULL DEFAULT '0',
+  `z` float NOT NULL DEFAULT '0',
+  `o` float NOT NULL DEFAULT '0',
+  `comments` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `dbscripts_on_creature_death`
+--
+
+LOCK TABLES `dbscripts_on_creature_death` WRITE;
+/*!40000 ALTER TABLE `dbscripts_on_creature_death` DISABLE KEYS */;
+/*!40000 ALTER TABLE `dbscripts_on_creature_death` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `dbscripts_on_creature_movement`
 --
 
 DROP TABLE IF EXISTS `dbscripts_on_creature_movement`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `dbscripts_on_creature_movement` (
-  `id` mediumint(8) unsigned NOT NULL default '0',
-  `delay` int(10) unsigned NOT NULL default '0',
-  `command` mediumint(8) unsigned NOT NULL default '0',
-  `datalong` mediumint(8) unsigned NOT NULL default '0',
-  `datalong2` int(10) unsigned NOT NULL default '0',
-  `buddy_entry` int(10) unsigned NOT NULL default '0',
-  `search_radius` int(10) unsigned NOT NULL default '0',
-  `data_flags` tinyint(3) unsigned NOT NULL default '0',
-  `dataint` int(11) NOT NULL default '0',
-  `dataint2` int(11) NOT NULL default '0',
-  `dataint3` int(11) NOT NULL default '0',
-  `dataint4` int(11) NOT NULL default '0',
-  `x` float NOT NULL default '0',
-  `y` float NOT NULL default '0',
-  `z` float NOT NULL default '0',
-  `o` float NOT NULL default '0',
+  `id` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `delay` int(10) unsigned NOT NULL DEFAULT '0',
+  `command` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `datalong` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `datalong2` int(10) unsigned NOT NULL DEFAULT '0',
+  `buddy_entry` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `search_radius` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `data_flags` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `dataint` int(11) NOT NULL DEFAULT '0',
+  `dataint2` int(11) NOT NULL DEFAULT '0',
+  `dataint3` int(11) NOT NULL DEFAULT '0',
+  `dataint4` int(11) NOT NULL DEFAULT '0',
+  `x` float NOT NULL DEFAULT '0',
+  `y` float NOT NULL DEFAULT '0',
+  `z` float NOT NULL DEFAULT '0',
+  `o` float NOT NULL DEFAULT '0',
   `comments` varchar(255) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure of `dbscripts_on_event`, `dbscripts_on_go_use`, `dbscripts_on_go_template_use`,
---                    `dbscripts_on_gossip`, `dbscripts_on_quest_end`, `dbscripts_on_quest_start`,
---                    `dbscripts_on_spell`, `dbscripts_on_creature_death`
-DROP TABLE IF EXISTS dbscripts_on_event;
-CREATE TABLE dbscripts_on_event LIKE dbscripts_on_creature_movement;
-DROP TABLE IF EXISTS dbscripts_on_go_use;
-CREATE TABLE dbscripts_on_go_use LIKE dbscripts_on_creature_movement;
-DROP TABLE IF EXISTS `dbscripts_on_go_template_use`;
-CREATE TABLE dbscripts_on_go_template_use LIKE dbscripts_on_creature_movement;
-DROP TABLE IF EXISTS `dbscripts_on_gossip`;
-CREATE TABLE dbscripts_on_gossip LIKE dbscripts_on_creature_movement;
-DROP TABLE IF EXISTS `dbscripts_on_quest_end`;
-CREATE TABLE dbscripts_on_quest_end LIKE dbscripts_on_creature_movement;
-DROP TABLE IF EXISTS dbscripts_on_quest_start;
-CREATE TABLE dbscripts_on_quest_start LIKE dbscripts_on_creature_movement;
-DROP TABLE IF EXISTS dbscripts_on_spell;
-CREATE TABLE dbscripts_on_spell LIKE dbscripts_on_creature_movement;
-DROP TABLE IF EXISTS dbscripts_on_creature_death;
-CREATE TABLE dbscripts_on_creature_death LIKE dbscripts_on_creature_movement;
+-- Dumping data for table `dbscripts_on_creature_movement`
+--
 
+LOCK TABLES `dbscripts_on_creature_movement` WRITE;
+/*!40000 ALTER TABLE `dbscripts_on_creature_movement` DISABLE KEYS */;
+/*!40000 ALTER TABLE `dbscripts_on_creature_movement` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `dbscripts_on_event`
+--
+
+DROP TABLE IF EXISTS `dbscripts_on_event`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `dbscripts_on_event` (
+  `id` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `delay` int(10) unsigned NOT NULL DEFAULT '0',
+  `command` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `datalong` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `datalong2` int(10) unsigned NOT NULL DEFAULT '0',
+  `buddy_entry` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `search_radius` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `data_flags` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `dataint` int(11) NOT NULL DEFAULT '0',
+  `dataint2` int(11) NOT NULL DEFAULT '0',
+  `dataint3` int(11) NOT NULL DEFAULT '0',
+  `dataint4` int(11) NOT NULL DEFAULT '0',
+  `x` float NOT NULL DEFAULT '0',
+  `y` float NOT NULL DEFAULT '0',
+  `z` float NOT NULL DEFAULT '0',
+  `o` float NOT NULL DEFAULT '0',
+  `comments` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `dbscripts_on_event`
+--
+
+LOCK TABLES `dbscripts_on_event` WRITE;
+/*!40000 ALTER TABLE `dbscripts_on_event` DISABLE KEYS */;
+/*!40000 ALTER TABLE `dbscripts_on_event` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `dbscripts_on_go_template_use`
+--
+
+DROP TABLE IF EXISTS `dbscripts_on_go_template_use`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `dbscripts_on_go_template_use` (
+  `id` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `delay` int(10) unsigned NOT NULL DEFAULT '0',
+  `command` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `datalong` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `datalong2` int(10) unsigned NOT NULL DEFAULT '0',
+  `buddy_entry` int(10) unsigned NOT NULL DEFAULT '0',
+  `search_radius` int(10) unsigned NOT NULL DEFAULT '0',
+  `data_flags` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `dataint` int(11) NOT NULL DEFAULT '0',
+  `dataint2` int(11) NOT NULL DEFAULT '0',
+  `dataint3` int(11) NOT NULL DEFAULT '0',
+  `dataint4` int(11) NOT NULL DEFAULT '0',
+  `x` float NOT NULL DEFAULT '0',
+  `y` float NOT NULL DEFAULT '0',
+  `z` float NOT NULL DEFAULT '0',
+  `o` float NOT NULL DEFAULT '0',
+  `comments` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `dbscripts_on_go_template_use`
+--
+
+LOCK TABLES `dbscripts_on_go_template_use` WRITE;
+/*!40000 ALTER TABLE `dbscripts_on_go_template_use` DISABLE KEYS */;
+/*!40000 ALTER TABLE `dbscripts_on_go_template_use` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `dbscripts_on_go_use`
+--
+
+DROP TABLE IF EXISTS `dbscripts_on_go_use`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `dbscripts_on_go_use` (
+  `id` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `delay` int(10) unsigned NOT NULL DEFAULT '0',
+  `command` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `datalong` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `datalong2` int(10) unsigned NOT NULL DEFAULT '0',
+  `buddy_entry` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `search_radius` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `data_flags` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `dataint` int(11) NOT NULL DEFAULT '0',
+  `dataint2` int(11) NOT NULL DEFAULT '0',
+  `dataint3` int(11) NOT NULL DEFAULT '0',
+  `dataint4` int(11) NOT NULL DEFAULT '0',
+  `x` float NOT NULL DEFAULT '0',
+  `y` float NOT NULL DEFAULT '0',
+  `z` float NOT NULL DEFAULT '0',
+  `o` float NOT NULL DEFAULT '0',
+  `comments` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `dbscripts_on_go_use`
+--
+
+LOCK TABLES `dbscripts_on_go_use` WRITE;
+/*!40000 ALTER TABLE `dbscripts_on_go_use` DISABLE KEYS */;
+/*!40000 ALTER TABLE `dbscripts_on_go_use` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `dbscripts_on_gossip`
+--
+
+DROP TABLE IF EXISTS `dbscripts_on_gossip`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `dbscripts_on_gossip` (
+  `id` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `delay` int(10) unsigned NOT NULL DEFAULT '0',
+  `command` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `datalong` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `datalong2` int(10) unsigned NOT NULL DEFAULT '0',
+  `buddy_entry` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `search_radius` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `data_flags` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `dataint` int(11) NOT NULL DEFAULT '0',
+  `dataint2` int(11) NOT NULL DEFAULT '0',
+  `dataint3` int(11) NOT NULL DEFAULT '0',
+  `dataint4` int(11) NOT NULL DEFAULT '0',
+  `x` float NOT NULL DEFAULT '0',
+  `y` float NOT NULL DEFAULT '0',
+  `z` float NOT NULL DEFAULT '0',
+  `o` float NOT NULL DEFAULT '0',
+  `comments` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `dbscripts_on_gossip`
+--
+
+LOCK TABLES `dbscripts_on_gossip` WRITE;
+/*!40000 ALTER TABLE `dbscripts_on_gossip` DISABLE KEYS */;
+/*!40000 ALTER TABLE `dbscripts_on_gossip` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `dbscripts_on_quest_end`
+--
+
+DROP TABLE IF EXISTS `dbscripts_on_quest_end`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `dbscripts_on_quest_end` (
+  `id` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `delay` int(10) unsigned NOT NULL DEFAULT '0',
+  `command` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `datalong` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `datalong2` int(10) unsigned NOT NULL DEFAULT '0',
+  `buddy_entry` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `search_radius` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `data_flags` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `dataint` int(11) NOT NULL DEFAULT '0',
+  `dataint2` int(11) NOT NULL DEFAULT '0',
+  `dataint3` int(11) NOT NULL DEFAULT '0',
+  `dataint4` int(11) NOT NULL DEFAULT '0',
+  `x` float NOT NULL DEFAULT '0',
+  `y` float NOT NULL DEFAULT '0',
+  `z` float NOT NULL DEFAULT '0',
+  `o` float NOT NULL DEFAULT '0',
+  `comments` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `dbscripts_on_quest_end`
+--
+
+LOCK TABLES `dbscripts_on_quest_end` WRITE;
+/*!40000 ALTER TABLE `dbscripts_on_quest_end` DISABLE KEYS */;
+/*!40000 ALTER TABLE `dbscripts_on_quest_end` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `dbscripts_on_quest_start`
+--
+
+DROP TABLE IF EXISTS `dbscripts_on_quest_start`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `dbscripts_on_quest_start` (
+  `id` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `delay` int(10) unsigned NOT NULL DEFAULT '0',
+  `command` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `datalong` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `datalong2` int(10) unsigned NOT NULL DEFAULT '0',
+  `buddy_entry` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `search_radius` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `data_flags` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `dataint` int(11) NOT NULL DEFAULT '0',
+  `dataint2` int(11) NOT NULL DEFAULT '0',
+  `dataint3` int(11) NOT NULL DEFAULT '0',
+  `dataint4` int(11) NOT NULL DEFAULT '0',
+  `x` float NOT NULL DEFAULT '0',
+  `y` float NOT NULL DEFAULT '0',
+  `z` float NOT NULL DEFAULT '0',
+  `o` float NOT NULL DEFAULT '0',
+  `comments` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `dbscripts_on_quest_start`
+--
+
+LOCK TABLES `dbscripts_on_quest_start` WRITE;
+/*!40000 ALTER TABLE `dbscripts_on_quest_start` DISABLE KEYS */;
+/*!40000 ALTER TABLE `dbscripts_on_quest_start` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `dbscripts_on_spell`
+--
+
+DROP TABLE IF EXISTS `dbscripts_on_spell`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `dbscripts_on_spell` (
+  `id` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `delay` int(10) unsigned NOT NULL DEFAULT '0',
+  `command` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `datalong` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `datalong2` int(10) unsigned NOT NULL DEFAULT '0',
+  `buddy_entry` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `search_radius` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `data_flags` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `dataint` int(11) NOT NULL DEFAULT '0',
+  `dataint2` int(11) NOT NULL DEFAULT '0',
+  `dataint3` int(11) NOT NULL DEFAULT '0',
+  `dataint4` int(11) NOT NULL DEFAULT '0',
+  `x` float NOT NULL DEFAULT '0',
+  `y` float NOT NULL DEFAULT '0',
+  `z` float NOT NULL DEFAULT '0',
+  `o` float NOT NULL DEFAULT '0',
+  `comments` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `dbscripts_on_spell`
+--
+
+LOCK TABLES `dbscripts_on_spell` WRITE;
+/*!40000 ALTER TABLE `dbscripts_on_spell` DISABLE KEYS */;
+/*!40000 ALTER TABLE `dbscripts_on_spell` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `disenchant_loot_template`
@@ -3627,7 +4080,6 @@ INSERT INTO `mangos_string` VALUES
 (535,'   Home movement to (X:%f Y:%f Z:%f)',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (536,'   Home movement used for player?!?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (537,'   Taxi flight',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-(1192,'  Effect movement',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (538,'   Unknown movement generator (%u)',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (539,'Player selected: %s.\nFaction: %u.\nnpcFlags: %u.\nEntry: %u.\nDisplayID: %u (Native: %u).',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (540,'Level: %u.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
@@ -3948,6 +4400,7 @@ INSERT INTO `mangos_string` VALUES
 (1189,'Yellow',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1190,'Amount of %s items is set to %u.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1191,'Items ratio for %s is set to %u.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+(1192,'Effect movement',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1194,'Current State Information: GOState %u, LootState %u. Collision %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1195,'Current State Information: GOState %u, LootState %u. Collision %s, (door %s by default)',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1200,'You tried to view cinematic %u but it doesn\'t exist.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
@@ -4616,16 +5069,19 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `pickpocketing_loot_template`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `pickpocketing_loot_template` (
-  `entry` mediumint(8) unsigned NOT NULL default '0',
-  `item` mediumint(8) unsigned NOT NULL default '0',
-  `ChanceOrQuestChance` float NOT NULL default '100',
-  `groupid` tinyint(3) unsigned NOT NULL default '0',
-  `mincountOrRef` mediumint(9) NOT NULL default '1',
-  `maxcount` tinyint(3) unsigned NOT NULL default '1',
-  `condition_id` MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0',
-  PRIMARY KEY  (`entry`,`item`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Loot System';
+  `entry` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `item` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `ChanceOrQuestChance` float NOT NULL DEFAULT '100',
+  `groupid` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `mincountOrRef` mediumint(9) NOT NULL DEFAULT '1',
+  `maxcount` tinyint(3) unsigned NOT NULL DEFAULT '1',
+  `condition_id` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`entry`,`item`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Loot System';
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `pickpocketing_loot_template`
@@ -4641,13 +5097,16 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `player_classlevelstats`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `player_classlevelstats` (
   `class` tinyint(3) unsigned NOT NULL,
   `level` tinyint(3) unsigned NOT NULL,
   `basehp` smallint(5) unsigned NOT NULL,
   `basemana` smallint(5) unsigned NOT NULL,
-  PRIMARY KEY  (`class`,`level`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 PACK_KEYS=0 COMMENT='Stores levels stats.';
+  PRIMARY KEY (`class`,`level`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 PACK_KEYS=0 COMMENT='Stores levels stats.';
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `player_classlevelstats`
@@ -5294,6 +5753,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `player_levelstats`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `player_levelstats` (
   `race` tinyint(3) unsigned NOT NULL,
   `class` tinyint(3) unsigned NOT NULL,
@@ -5303,8 +5764,9 @@ CREATE TABLE `player_levelstats` (
   `sta` tinyint(3) unsigned NOT NULL,
   `inte` tinyint(3) unsigned NOT NULL,
   `spi` tinyint(3) unsigned NOT NULL,
-  PRIMARY KEY  (`race`,`class`,`level`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 PACK_KEYS=0 COMMENT='Stores levels stats.';
+  PRIMARY KEY (`race`,`class`,`level`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 PACK_KEYS=0 COMMENT='Stores levels stats.';
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `player_levelstats`
@@ -8956,15 +9418,19 @@ INSERT INTO `player_levelstats` VALUES
 /*!40000 ALTER TABLE `player_levelstats` ENABLE KEYS */;
 UNLOCK TABLES;
 
--- ----------------------------
--- Table structure for player_xp_for_level
--- ----------------------------
+--
+-- Table structure for table `player_xp_for_level`
+--
+
 DROP TABLE IF EXISTS `player_xp_for_level`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `player_xp_for_level` (
   `lvl` int(3) unsigned NOT NULL,
   `xp_for_next_level` int(10) unsigned NOT NULL,
-  PRIMARY KEY  (`lvl`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`lvl`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `player_xp_for_level`
@@ -9050,17 +9516,20 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `playercreateinfo`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `playercreateinfo` (
-  `race` tinyint(3) unsigned NOT NULL default '0',
-  `class` tinyint(3) unsigned NOT NULL default '0',
-  `map` smallint(5) unsigned NOT NULL default '0',
-  `zone` mediumint(8) unsigned NOT NULL default '0',
-  `position_x` float NOT NULL default '0',
-  `position_y` float NOT NULL default '0',
-  `position_z` float NOT NULL default '0',
-  `orientation` float NOT NULL default '0',
-  PRIMARY KEY  (`race`,`class`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `race` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `class` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `map` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `zone` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `position_x` float NOT NULL DEFAULT '0',
+  `position_y` float NOT NULL DEFAULT '0',
+  `position_z` float NOT NULL DEFAULT '0',
+  `orientation` float NOT NULL DEFAULT '0',
+  PRIMARY KEY (`race`,`class`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `playercreateinfo`
@@ -9129,15 +9598,18 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `playercreateinfo_action`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `playercreateinfo_action` (
-  `race` tinyint(3) unsigned NOT NULL default '0',
-  `class` tinyint(3) unsigned NOT NULL default '0',
-  `button` smallint(5) unsigned NOT NULL default '0',
-  `action` int(11) unsigned NOT NULL default '0',
-  `type` smallint(5) unsigned NOT NULL default '0',
-  KEY `playercreateinfo_race_class_index` (`race`,`class`),
-  PRIMARY KEY (`race`,`class`,`button`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `race` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `class` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `button` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `action` int(11) unsigned NOT NULL DEFAULT '0',
+  `type` smallint(5) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`race`,`class`,`button`),
+  KEY `playercreateinfo_race_class_index` (`race`,`class`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `playercreateinfo_action`
@@ -9435,13 +9907,16 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `playercreateinfo_item`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `playercreateinfo_item` (
-  `race` tinyint(3) unsigned NOT NULL default '0',
-  `class` tinyint(3) unsigned NOT NULL default '0',
-  `itemid` mediumint(8) unsigned NOT NULL default '0',
-  `amount` tinyint(3) unsigned NOT NULL default '1',
+  `race` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `class` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `itemid` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `amount` tinyint(3) unsigned NOT NULL DEFAULT '1',
   KEY `playercreateinfo_race_class_index` (`race`,`class`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `playercreateinfo_item`
@@ -9457,13 +9932,16 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `playercreateinfo_spell`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `playercreateinfo_spell` (
-  `race` tinyint(3) unsigned NOT NULL default '0',
-  `class` tinyint(3) unsigned NOT NULL default '0',
-  `Spell` mediumint(8) unsigned NOT NULL default '0',
-  `Note` varchar(255) default NULL,
-  PRIMARY KEY  (`race`,`class`,`Spell`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `race` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `class` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `Spell` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `Note` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`race`,`class`,`Spell`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `playercreateinfo_spell`
@@ -9541,12 +10019,12 @@ INSERT INTO `playercreateinfo_spell` VALUES
 (1,2,9078,'Cloth'),
 (1,2,9116,'Shield'),
 (1,2,9125,'Generic'),
-(1,2,21084,'Seal of Righteousness'),
 (1,2,20597,'Sword Specialization'),
 (1,2,20598,'The Human Spirit'),
 (1,2,20599,'Diplomacy'),
 (1,2,20600,'Perception'),
 (1,2,20864,'Mace Specialization'),
+(1,2,21084,'Seal of Righteousness'),
 (1,2,21651,'Opening'),
 (1,2,21652,'Closing'),
 (1,2,22027,'Remove Insignia'),
@@ -9951,10 +10429,10 @@ INSERT INTO `playercreateinfo_spell` VALUES
 (3,2,9078,'Cloth'),
 (3,2,9116,'Shield'),
 (3,2,9125,'Generic'),
-(3,2,21084,'Seal of Righteousness'),
 (3,2,20594,'Stoneform'),
 (3,2,20595,'Gun Specialization'),
 (3,2,20596,'Frost Resistance'),
+(3,2,21084,'Seal of Righteousness'),
 (3,2,21651,'Opening'),
 (3,2,21652,'Closing'),
 (3,2,22027,'Remove Insignia'),
@@ -11436,16 +11914,19 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `points_of_interest`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `points_of_interest` (
-  `entry` mediumint(8) unsigned NOT NULL default '0',
-  `x` float NOT NULL default '0',
-  `y` float NOT NULL default '0',
-  `icon` mediumint(8) unsigned NOT NULL default '0',
-  `flags` mediumint(8) unsigned NOT NULL default '0',
-  `data` mediumint(8) unsigned NOT NULL default '0',
+  `entry` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `x` float NOT NULL DEFAULT '0',
+  `y` float NOT NULL DEFAULT '0',
+  `icon` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `flags` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `data` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `icon_name` text NOT NULL,
-  PRIMARY KEY  (`entry`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`entry`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `points_of_interest`
@@ -11461,14 +11942,17 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `pool_creature`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `pool_creature` (
-  `guid` int(10) unsigned NOT NULL default '0',
-  `pool_entry` mediumint(8) unsigned NOT NULL default '0',
-  `chance` float unsigned NOT NULL default '0',
+  `guid` int(10) unsigned NOT NULL DEFAULT '0',
+  `pool_entry` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `chance` float unsigned NOT NULL DEFAULT '0',
   `description` varchar(255) NOT NULL,
-  PRIMARY KEY  (`guid`),
-  INDEX `pool_idx` (pool_entry)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`guid`),
+  KEY `pool_idx` (`pool_entry`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `pool_creature`
@@ -11484,14 +11968,17 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `pool_creature_template`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `pool_creature_template` (
-  `id` int(10) unsigned NOT NULL default '0',
-  `pool_entry` mediumint(8) unsigned NOT NULL default '0',
-  `chance` float unsigned NOT NULL default '0',
+  `id` int(10) unsigned NOT NULL DEFAULT '0',
+  `pool_entry` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `chance` float unsigned NOT NULL DEFAULT '0',
   `description` varchar(255) NOT NULL,
-  PRIMARY KEY  (`id`),
-  INDEX `pool_idx` (pool_entry)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`id`),
+  KEY `pool_idx` (`pool_entry`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `pool_creature_template`
@@ -11507,14 +11994,17 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `pool_gameobject`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `pool_gameobject` (
-  `guid` int(10) unsigned NOT NULL default '0',
-  `pool_entry` mediumint(8) unsigned NOT NULL default '0',
-  `chance` float unsigned NOT NULL default '0',
+  `guid` int(10) unsigned NOT NULL DEFAULT '0',
+  `pool_entry` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `chance` float unsigned NOT NULL DEFAULT '0',
   `description` varchar(255) NOT NULL,
-  PRIMARY KEY  (`guid`),
-  INDEX `pool_idx` (pool_entry)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`guid`),
+  KEY `pool_idx` (`pool_entry`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `pool_gameobject`
@@ -11631,6 +12121,8 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `quest_template`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `quest_template` (
   `entry` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `Method` tinyint(3) unsigned NOT NULL DEFAULT '2',
@@ -11882,6 +12374,68 @@ LOCK TABLES `reserved_name` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `script_texts`
+--
+
+DROP TABLE IF EXISTS `script_texts`;
+CREATE TABLE `script_texts` (
+  `entry` mediumint(8) NOT NULL,
+  `content_default` text NOT NULL,
+  `content_loc1` text,
+  `content_loc2` text,
+  `content_loc3` text,
+  `content_loc4` text,
+  `content_loc5` text,
+  `content_loc6` text,
+  `content_loc7` text,
+  `content_loc8` text,
+  `sound` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `type` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `language` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `emote` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `comment` text,
+  PRIMARY KEY  (`entry`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Script Texts';
+
+
+--
+-- Dumping data for table `script_texts`
+--
+
+LOCK TABLES `script_texts` WRITE;
+/*!40000 ALTER TABLE `script_texts` DISABLE KEYS */;
+/*!40000 ALTER TABLE `script_texts` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+--
+-- Table structure for table `script_waypoint`
+--
+
+DROP TABLE IF EXISTS `script_waypoint`;
+CREATE TABLE `script_waypoint` (
+  entry mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'creature_template entry',
+  pointid mediumint(8) unsigned NOT NULL DEFAULT '0',
+  location_x float NOT NULL DEFAULT '0',
+  location_y float NOT NULL DEFAULT '0',
+  location_z float NOT NULL DEFAULT '0',
+  waittime int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'waittime in millisecs',
+  point_comment text,
+  PRIMARY KEY (entry, pointid)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Script Creature waypoints';
+
+
+--
+-- Dumping data for table `script_waypoint`
+--
+
+LOCK TABLES `script_waypoint` WRITE;
+/*!40000 ALTER TABLE `script_waypoint` DISABLE KEYS */;
+/*!40000 ALTER TABLE `script_waypoint` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+--
 -- Table structure for table `scripted_areatrigger`
 --
 
@@ -11926,6 +12480,26 @@ LOCK TABLES `scripted_event` WRITE;
 /*!40000 ALTER TABLE `scripted_event` DISABLE KEYS */;
 /*!40000 ALTER TABLE `scripted_event` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `sd2_db_version`
+--
+
+DROP TABLE IF EXISTS `sd2_db_version`;
+CREATE TABLE `sd2_db_version` (
+  `version` varchar(255) NOT NULL default '' COMMENT 'Database version string'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+--
+-- Dumping data for table `sd2_db_version`
+--
+
+LOCK TABLES `sd2_db_version` WRITE;
+/*!40000 ALTER TABLE `sd2_db_version` DISABLE KEYS */;
+/*!40000 ALTER TABLE `sd2_db_version` ENABLE KEYS */;
+UNLOCK TABLES;
+
 
 --
 -- Table structure for table `skill_discovery_template`
@@ -15119,11 +15693,14 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `spell_elixir`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `spell_elixir` (
-  `entry` int(11) unsigned NOT NULL default '0' COMMENT 'SpellId of potion',
-  `mask` tinyint(1) unsigned NOT NULL default '0' COMMENT 'Mask 0x1 battle 0x2 guardian 0x3 flask 0x7 unstable flasks 0xB shattrath flasks',
-  PRIMARY KEY  (`entry`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Spell System';
+  `entry` int(11) unsigned NOT NULL DEFAULT '0' COMMENT 'SpellId of potion',
+  `mask` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT 'Mask 0x1 battle 0x2 guardian 0x3 flask 0x7 unstable flasks 0xB shattrath flasks',
+  PRIMARY KEY (`entry`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Spell System';
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `spell_elixir`
@@ -15181,8 +15758,8 @@ INSERT INTO `spell_elixir` VALUES
 (17624,0x3),
 (17626,0x3),
 (17627,0x3),
-(17629,0x3),
 (17628,0x3),
+(17629,0x3),
 (18191,0x10),
 (18192,0x10),
 (18193,0x10),
@@ -15890,8 +16467,8 @@ INSERT INTO `spell_threat` VALUES
 ( 1608,  78, 1, 0),
 ( 1715,  61, 1, 0),
 ( 1735,  25, 1, 0),
-( 2649, 415, 1, 0),
 ( 2139, 300, 1, 0),
+( 2649, 415, 1, 0),
 ( 3716, 395, 1, 0),
 ( 5679,   0, 2, 0),
 ( 6343,  17, 1, 0),
