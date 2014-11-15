@@ -14,8 +14,8 @@ set svr=localhost
 set user=mangos
 set pass=
 set port=3306
-set wdb=mangos0
-set cdb=character0
+set wdb=mangos1
+set cdb=character1
 set rdb=realmd
 
 rem -- Don't change past this point --
