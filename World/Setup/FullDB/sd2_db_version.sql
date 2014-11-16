@@ -45,7 +45,7 @@ CREATE TABLE `sd2_db_version` (
 
 LOCK TABLES `sd2_db_version` WRITE;
 /*!40000 ALTER TABLE `sd2_db_version` DISABLE KEYS */;
-INSERT INTO `sd2_db_version` (`version`) VALUES ('ScriptDev2 (for MaNGOS One Release 0.19+) ');
+INSERT INTO `sd2_db_version` (`version`) VALUES ('ScriptDev2 (for MaNGOS One Rel20+) ');
 /*!40000 ALTER TABLE `sd2_db_version` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

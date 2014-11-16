@@ -37,7 +37,7 @@ DROP TABLE IF EXISTS `db_version`;
 CREATE TABLE `db_version` (
   `version` varchar(120) DEFAULT NULL,
   `creature_ai_version` varchar(120) DEFAULT NULL,
-  `required_19005_10_mangos_command` bit(1) DEFAULT NULL
+  `required_20000_02_Script_Fixes` bit(1) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Used DB version notes';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -47,7 +47,7 @@ CREATE TABLE `db_version` (
 
 LOCK TABLES `db_version` WRITE;
 /*!40000 ALTER TABLE `db_version` DISABLE KEYS */;
-INSERT INTO `db_version` (`version`, `creature_ai_version`, `required_19005_10_mangos_command`) VALUES ('OneDatabase 1.0.0 for MaNGOSOne s1881+ and ScriptDevOne s2670+','MaNGOSOne Artificial Creature Intelligence Database',NULL);
+INSERT INTO `db_version` (`version`, `creature_ai_version`, `required_20000_02_Script_Fixes`) VALUES ('OneDatabase 1.0.1 for MaNGOSOne Rel20','MaNGOSOne Artificial Creature Intelligence Database',NULL);
 /*!40000 ALTER TABLE `db_version` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
