@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -49,8 +48,7 @@ CREATE TABLE `gameobject_battleground` (
 
 LOCK TABLES `gameobject_battleground` WRITE;
 /*!40000 ALTER TABLE `gameobject_battleground` DISABLE KEYS */;
-INSERT INTO `gameobject_battleground` (`guid`, `event1`, `event2`) VALUES
-(90000,0,0),
+INSERT INTO `gameobject_battleground` (`guid`, `event1`, `event2`) VALUES (90000,0,0),
 (90001,1,0),
 (90008,254,0),
 (90009,254,0),

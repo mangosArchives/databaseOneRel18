@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -49,8 +48,7 @@ CREATE TABLE `game_graveyard_zone` (
 
 LOCK TABLES `game_graveyard_zone` WRITE;
 /*!40000 ALTER TABLE `game_graveyard_zone` DISABLE KEYS */;
-INSERT INTO `game_graveyard_zone` (`id`, `ghost_zone`, `faction`) VALUES
-(3,10,469),
+INSERT INTO `game_graveyard_zone` (`id`, `ghost_zone`, `faction`) VALUES (3,10,469),
 (4,40,0),
 (4,1581,0),
 (6,38,469),

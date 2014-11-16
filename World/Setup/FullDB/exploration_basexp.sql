@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -48,8 +47,7 @@ CREATE TABLE `exploration_basexp` (
 
 LOCK TABLES `exploration_basexp` WRITE;
 /*!40000 ALTER TABLE `exploration_basexp` DISABLE KEYS */;
-INSERT INTO `exploration_basexp` (`level`, `basexp`) VALUES
-(0,0),
+INSERT INTO `exploration_basexp` (`level`, `basexp`) VALUES (0,0),
 (1,5),
 (2,15),
 (3,25),

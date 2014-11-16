@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -69,8 +68,7 @@ CREATE TABLE `creature_ai_scripts` (
 
 LOCK TABLES `creature_ai_scripts` WRITE;
 /*!40000 ALTER TABLE `creature_ai_scripts` DISABLE KEYS */;
-INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
-(601,6,4,0,30,0,0,0,0,0,1,-7,-8,0,0,0,0,0,0,0,0,0,'Kobold Vermin - Random Say on Aggro'),
+INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES (601,6,4,0,30,0,0,0,0,0,1,-7,-8,0,0,0,0,0,0,0,0,0,'Kobold Vermin - Random Say on Aggro'),
 (3001,30,11,0,100,0,0,0,0,0,11,11959,0,1,0,0,0,0,0,0,0,0,'Forest Spider - Cast Poison Proc on Spawn'),
 (3801,38,4,0,30,0,0,0,0,0,1,-2,-3,-4,0,0,0,0,0,0,0,0,'Defias Thug - Random Say on Aggro'),
 (4001,40,4,0,30,0,0,0,0,0,1,-7,0,0,0,0,0,0,0,0,0,0,'Kobold Miner - Random Say on Aggro'),
@@ -8823,8 +8821,7 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (833601,8336,0,0,100,3,15600,17800,10700,18200,11,11981,1,0,0,0,0,0,0,0,0,0,'Hakkari Sapper - Cast Mana Burn'),
 (833602,8336,0,0,100,3,8700,13900,27300,33300,11,12882,0,1,0,0,0,0,0,0,0,0,'Hakkari Sapper - Cast Wing Flap'),
 (837801,8378,1,0,100,1,1000,1000,1800000,1800000,11,1006,0,0,0,0,0,0,0,0,0,0,'Alexandra Blazen - Cast Inner Fire');
-INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
-(837802,8378,14,0,100,1,1000,40,14000,18000,11,11640,6,1,0,0,0,0,0,0,0,0,'Alexandra Blazen - Cast Renew on Friendlies'),
+INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES (837802,8378,14,0,100,1,1000,40,14000,18000,11,11640,6,1,0,0,0,0,0,0,0,0,'Alexandra Blazen - Cast Renew on Friendlies'),
 (838001,8380,9,0,100,1,0,5,8000,12000,11,11293,1,0,0,0,0,0,0,0,0,0,'Captain Vanessa Beltis - Cast Sinister Strike'),
 (838101,8381,1,0,100,0,0,0,0,0,21,0,0,0,22,0,0,0,0,0,0,0,'Lindros - Prevent Combat Movement and Set Phase to 0 on Spawn'),
 (838102,8381,4,0,100,0,0,0,0,0,11,20823,1,0,23,1,0,0,0,0,0,0,'Lindros - Cast Fireball and Set Phase 1 on Aggro'),
@@ -17324,8 +17321,7 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (1971002,19710,0,0,100,7,41100,83200,31400,46700,11,35311,1,0,0,0,0,0,0,0,0,0,'Gatewatcher Iron-Hand - Cast Stream of Machine Fluid'),
 (1971003,19710,0,0,100,7,10800,17400,39800,62700,11,35326,1,0,0,0,0,0,0,0,0,0,'Gatewatcher Iron-Hand - Cast Hammer Punch'),
 (1971004,19710,0,0,100,3,14400,25700,23300,53500,11,35327,0,1,1,-1214,-1215,0,1,-1219,0,0,'Gatewatcher Iron-Hand (Normal) - Cast Jackhammer and Random Yell and Emote');
-INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES
-(1971005,19710,0,0,100,5,14400,25700,23300,53500,11,39194,0,1,1,-1214,-1215,0,1,-1219,0,0,'Gatewatcher Iron-Hand (Heroic) - Cast Jackhammer and Random Yell and Emote'),
+INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES (1971005,19710,0,0,100,5,14400,25700,23300,53500,11,39194,0,1,1,-1214,-1215,0,1,-1219,0,0,'Gatewatcher Iron-Hand (Heroic) - Cast Jackhammer and Random Yell and Emote'),
 (1971006,19710,0,0,100,3,32100,39800,32600,67500,11,35322,0,1,0,0,0,0,0,0,0,0,'Gatewatcher Iron-Hand (Normal) - Cast Shadow Power'),
 (1971007,19710,0,0,100,5,32100,39800,32600,67500,11,39193,0,1,0,0,0,0,0,0,0,0,'Gatewatcher Iron-Hand (Heroic) - Cast Shadow Power'),
 (1971008,19710,5,0,100,7,0,0,0,0,1,-1216,-1217,0,0,0,0,0,0,0,0,0,'Gatewatcher Iron-Hand - Random Yell on Player Kill'),

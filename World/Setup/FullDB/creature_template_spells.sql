@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -51,8 +50,7 @@ CREATE TABLE `creature_template_spells` (
 
 LOCK TABLES `creature_template_spells` WRITE;
 /*!40000 ALTER TABLE `creature_template_spells` DISABLE KEYS */;
-INSERT INTO `creature_template_spells` (`entry`, `spell1`, `spell2`, `spell3`, `spell4`) VALUES
-(30,744,0,0,0),
+INSERT INTO `creature_template_spells` (`entry`, `spell1`, `spell2`, `spell3`, `spell4`) VALUES (30,744,0,0,0),
 (40,6016,0,0,0),
 (43,744,0,0,0),
 (46,3368,0,0,0),

@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -49,8 +48,7 @@ CREATE TABLE `pool_template` (
 
 LOCK TABLES `pool_template` WRITE;
 /*!40000 ALTER TABLE `pool_template` DISABLE KEYS */;
-INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
-(1000,1,'Stone Fury (2258)'),
+INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES (1000,1,'Stone Fury (2258)'),
 (1001,1,'Narillasanz (2447)'),
 (1002,1,'Skhowl (2452)'),
 (1003,1,'Lo\'Grosh (2453)'),
@@ -6175,7 +6173,8 @@ INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
 (12261,1,'Shadowmoon Valley mineral, node 125'),
 (12262,1,'Shadowmoon Valley mineral, node 126'),
 (12263,1,'Shadowmoon Valley mineral, node 127'),
-(12264,1,'Shadowmoon Valley mineral, node 128');
+(12264,1,'Shadowmoon Valley mineral, node 128'),
+(12265,18,'Master Creature Pool - Fargodeep Mine (Inner Section)');
 /*!40000 ALTER TABLE `pool_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

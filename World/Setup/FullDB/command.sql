@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -49,10 +48,9 @@ CREATE TABLE `command` (
 
 LOCK TABLES `command` WRITE;
 /*!40000 ALTER TABLE `command` DISABLE KEYS */;
-INSERT INTO `command` (`name`, `security`, `help`) VALUES
-('account',0,'Syntax: .account\r\n\r\nDisplay the access level of your account.'),
+INSERT INTO `command` (`name`, `security`, `help`) VALUES ('account',0,'Syntax: .account\r\n\r\nDisplay the access level of your account.'),
 ('account characters',3,'Syntax: .account characters [#accountId|$accountName]\r\n\r\nShow list all characters for account selected by provided #accountId or $accountName, or for selected player in game.'),
-('account create',4,'Syntax: .account create $account $password\r\n\r\nCreate account and set password to it.'),
+('account create',4,'Syntax: .account create $account $password [$expansion]\r\n\r\nCreate account and set password to it. Optionally, you may also set another expansion for this account than the defined default value.'),
 ('account delete',4,'Syntax: .account delete $account\r\n\r\nDelete account with all characters.'),
 ('account lock',0,'Syntax: .account lock [on|off]\r\n\r\nAllow login from account only from current used IP or remove this requirement.'),
 ('account onlinelist',4,'Syntax: .account onlinelist\r\n\r\nShow list of online accounts.'),
@@ -336,7 +334,7 @@ INSERT INTO `command` (`name`, `security`, `help`) VALUES
 ('tele del',3,'Syntax: .tele del $name\r\n\r\nRemove location with name $name for .tele command locations list.'),
 ('tele group',1,'Syntax: .tele group#location\r\n\r\nTeleport a selected player and his group members to a given location.'),
 ('tele name',1,'Syntax: .tele name [#playername] #location\r\n\r\nTeleport the given character to a given location. Character can be offline.'),
-('ticket',2,'Syntax: .ticket on\r\n        .ticket off\r\n        .ticket #num\r\n        .ticket $character_name\r\n        .ticket respond #num $response\r\n        .ticket respond $character_name $response\r\n\r\non/off for GMs to show or not a new ticket directly, $character_name to show ticket of this character, #num to show ticket #num.'),
+('ticket',2,'Syntax: .ticket on\r\n        .ticket off\r\n        .ticket system_on\r\n        .ticket system_off\r\n        .ticket #num\r\n        .ticket $character_name\r\n        .ticket respond/response/whisper #num $response\r\n        .ticket respond/response/whisper $character_name $response\r\n        .ticket close $character_name\r\n        .ticket close #num\r\n        .ticket close_survey #num\r\n        .ticket close_survey $character_name\r\n\r\non/off for GMs to show or not a new ticket directly, $character_name to show ticket of this character, #num to show ticket #num, close to close the given ticket, close_survey to close the given ticket and have the player answer a survey about the gm, system_on/off to globally turn off accepting tickets, will show a message to the client if off that you cant file a ticket if off'),
 ('titles add',2,'Syntax: .titles add #title\r\nAdd title #title (id or shift-link) to known titles list for selected player.'),
 ('titles current',2,'Syntax: .titles current #title\r\nSet title #title (id or shift-link) as current selected titl for selected player. If title not in known title list for player then it will be added to list.'),
 ('titles remove',2,'Syntax: .titles remove #title\r\nRemove title #title (id or shift-link) from known titles list for selected player.'),

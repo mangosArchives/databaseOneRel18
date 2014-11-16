@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -56,8 +55,7 @@ CREATE TABLE `spell_area` (
 
 LOCK TABLES `spell_area` WRITE;
 /*!40000 ALTER TABLE `spell_area` DISABLE KEYS */;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_start_active`, `quest_end`, `condition_id`, `aura_spell`, `racemask`, `gender`, `autocast`) VALUES
-(35480,2367,0,0,0,0,0,690,0,1),
+INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_start_active`, `quest_end`, `condition_id`, `aura_spell`, `racemask`, `gender`, `autocast`) VALUES (35480,2367,0,0,0,0,0,690,0,1),
 (35481,2367,0,0,0,0,0,690,1,1),
 (35482,2367,0,0,0,0,0,1032,0,1),
 (35483,2367,0,0,0,0,0,1032,1,1),

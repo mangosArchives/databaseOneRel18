@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -51,8 +50,7 @@ CREATE TABLE `pool_pool` (
 
 LOCK TABLES `pool_pool` WRITE;
 /*!40000 ALTER TABLE `pool_pool` DISABLE KEYS */;
-INSERT INTO `pool_pool` (`pool_id`, `mother_pool`, `chance`, `description`) VALUES
-(3000,2000,0,'Mineral Spawn Point 1 - Alterac Mountains (Inner Section)'),
+INSERT INTO `pool_pool` (`pool_id`, `mother_pool`, `chance`, `description`) VALUES (3000,2000,0,'Mineral Spawn Point 1 - Alterac Mountains (Inner Section)'),
 (3001,2000,0,'Mineral Spawn Point 2 - Alterac Mountains (Inner Section)'),
 (3002,2000,0,'Mineral Spawn Point 3 - Alterac Mountains (Inner Section)'),
 (3003,2000,0,'Mineral Spawn Point 4 - Alterac Mountains (Inner Section)'),
@@ -5912,7 +5910,8 @@ INSERT INTO `pool_pool` (`pool_id`, `mother_pool`, `chance`, `description`) VALU
 (12261,2068,0,'Shadowmoon Valley mineral, node 125'),
 (12262,2068,0,'Shadowmoon Valley mineral, node 126'),
 (12263,2068,0,'Shadowmoon Valley mineral, node 127'),
-(12264,2068,0,'Shadowmoon Valley mineral, node 128');
+(12264,2068,0,'Shadowmoon Valley mineral, node 128'),
+(12265,12265,0,'Kobold Tunneler - Fargodeep Mine');
 /*!40000 ALTER TABLE `pool_pool` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -51,8 +50,7 @@ CREATE TABLE `spell_chain` (
 
 LOCK TABLES `spell_chain` WRITE;
 /*!40000 ALTER TABLE `spell_chain` DISABLE KEYS */;
-INSERT INTO `spell_chain` (`spell_id`, `prev_spell`, `first_spell`, `rank`, `req_spell`) VALUES
-(10,0,10,1,0),
+INSERT INTO `spell_chain` (`spell_id`, `prev_spell`, `first_spell`, `rank`, `req_spell`) VALUES (10,0,10,1,0),
 (17,0,17,1,0),
 (116,0,116,1,0),
 (118,0,118,1,0),

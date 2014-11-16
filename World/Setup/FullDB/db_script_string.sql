@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -61,8 +60,7 @@ CREATE TABLE `db_script_string` (
 
 LOCK TABLES `db_script_string` WRITE;
 /*!40000 ALTER TABLE `db_script_string` DISABLE KEYS */;
-INSERT INTO `db_script_string` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `comment`) VALUES
-(2000005091,'Be bathed in my power! Drink in my might! Battle for the glory of the Horde!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,6,0,0,NULL),
+INSERT INTO `db_script_string` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `comment`) VALUES (2000005091,'Be bathed in my power! Drink in my might! Battle for the glory of the Horde!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,6,0,0,NULL),
 (2000005090,'Honor your heroes! On this day, they have dealt a great blow against one of our most hated enemies! The false Warchief, Rend Blackhand, has fallen! ',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,6,0,0,NULL),
 (2000000097,'... oops.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000000096,'Ok, let\'s get started!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),

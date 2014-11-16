@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -50,8 +49,7 @@ CREATE TABLE `gossip_menu` (
 
 LOCK TABLES `gossip_menu` WRITE;
 /*!40000 ALTER TABLE `gossip_menu` DISABLE KEYS */;
-INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES
-(21,518,0,0),
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES (21,518,0,0),
 (21,519,0,0),
 (22,520,0,0),
 (23,523,0,0),

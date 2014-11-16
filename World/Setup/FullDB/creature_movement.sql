@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -64,8 +63,7 @@ CREATE TABLE `creature_movement` (
 
 LOCK TABLES `creature_movement` WRITE;
 /*!40000 ALTER TABLE `creature_movement` DISABLE KEYS */;
-INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES
-(51,1,-4981.08,-1163.04,501.647,0,0,0,0,0,0,0,0,0,0,0,0,0),
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (51,1,-4981.08,-1163.04,501.647,0,0,0,0,0,0,0,0,0,0,0,0,0),
 (51,2,-4999.42,-1182.11,501.66,0,0,0,0,0,0,0,0,0,0,0,0,0),
 (51,3,-4997.61,-1210.09,501.678,0,0,0,0,0,0,0,0,0,0,0,0,0),
 (51,4,-4973.14,-1239.19,501.678,0,0,0,0,0,0,0,0,0,0,0,0,0),
@@ -16479,8 +16477,7 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (27289,97,-1011.8,1177.4,89.7398,0,0,0,0,0,0,0,0,0,0,0,0,0),
 (27289,98,-1033.08,1182.29,89.7629,0,0,0,0,0,0,0,0,0,0,0,0,0),
 (27289,99,-1073.62,1186.33,89.7398,0,0,0,0,0,0,0,0,0,0,0,0,0);
-INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES
-(27289,100,-1101.59,1187.56,89.7398,0,0,0,0,0,0,0,0,0,0,0,0,0),
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (27289,100,-1101.59,1187.56,89.7398,0,0,0,0,0,0,0,0,0,0,0,0,0),
 (27289,101,-1129.48,1190.01,89.8855,0,0,0,0,0,0,0,0,0,0,0,0,0),
 (27289,102,-1143.44,1191.11,91.0344,0,0,0,0,0,0,0,0,0,0,0,0,0),
 (27289,103,-1166.85,1194.28,93.9649,0,0,0,0,0,0,0,0,0,0,0,0,0),
@@ -29167,7 +29164,7 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (48360,7,1749.08,978.873,17.3347,0,0,0,0,0,0,0,0,0,0,0.662242,0,0),
 (48360,8,1753.04,993.501,16.1905,0,0,0,0,0,0,0,0,0,0,1.52618,0,0),
 (48372,1,1652.8,986.208,15.986,0,0,0,0,0,0,0,0,0,0,5.89837,0,0),
-(48372,2,1663.43,985.137,15.986,0,0,0,0,0,0,0,0,0,0,2.1e-05,0,0),
+(48372,2,1663.43,985.137,15.986,0,0,0,0,0,0,0,0,0,0,0.000021,0,0),
 (48372,3,1671.62,991.285,15.986,0,0,0,0,0,0,0,0,0,0,0.687244,0,0),
 (48372,4,1677.19,991.022,15.986,0,0,0,0,0,0,0,0,0,0,6.23608,0,0),
 (48372,5,1680.37,985.736,15.986,0,0,0,0,0,0,0,0,0,0,5.21507,0,0),
@@ -29183,7 +29180,7 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (48372,15,1680.37,985.736,15.986,0,0,0,0,0,0,0,0,0,0,5.21507,0,0),
 (48372,16,1677.19,991.022,15.986,0,0,0,0,0,0,0,0,0,0,6.23608,0,0),
 (48372,17,1671.62,991.285,15.986,0,0,0,0,0,0,0,0,0,0,0.687244,0,0),
-(48372,18,1663.43,985.137,15.986,0,0,0,0,0,0,0,0,0,0,2.1e-05,0,0),
+(48372,18,1663.43,985.137,15.986,0,0,0,0,0,0,0,0,0,0,0.000021,0,0),
 (48372,19,1652.8,986.208,15.986,0,0,0,0,0,0,0,0,0,0,5.89837,0,0),
 (48372,20,1647.82,995.134,16.1043,0,0,0,0,0,0,0,0,0,0,4.70848,0,0),
 (48373,1,1711.24,838.317,35.6529,0,0,0,0,0,0,0,0,0,0,3.1115,0,0),
@@ -32777,8 +32774,7 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (54043,2,2054.46,-4676.13,25.4656,0,0,0,0,0,0,0,0,0,0,0,0,0),
 (54043,3,2055.34,-4670.51,26.0889,0,0,0,0,0,0,0,0,0,0,0,0,0),
 (54043,4,2061.59,-4668.72,25.4664,0,0,0,0,0,0,0,0,0,0,0,0,0);
-INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES
-(54043,5,2066.19,-4672.32,25.4664,0,0,0,0,0,0,0,0,0,0,0,0,0),
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (54043,5,2066.19,-4672.32,25.4664,0,0,0,0,0,0,0,0,0,0,0,0,0),
 (54043,6,2060.03,-4677.38,25.4664,0,0,0,0,0,0,0,0,0,0,0,0,0),
 (54043,7,2054.3,-4673.81,25.4664,0,0,0,0,0,0,0,0,0,0,0,0,0),
 (54043,8,2060.28,-4669.15,25.4664,0,0,0,0,0,0,0,0,0,0,0,0,0),
@@ -48660,8 +48656,7 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (99255,11,-1032.43,7002.11,-0.758486,0,0,0,0,0,0,0,0,0,0,0.938919,0,0),
 (99255,12,-972.927,7032.61,21.8791,0,0,0,0,0,0,0,0,0,0,0.474748,0,0),
 (99255,13,-953.563,7064.02,21.0755,0,0,0,0,0,0,0,0,0,0,1.01903,0,0);
-INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES
-(99255,14,-952.247,7134.55,9.83648,0,0,0,0,0,0,0,0,0,0,1.18867,0,0),
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (99255,14,-952.247,7134.55,9.83648,0,0,0,0,0,0,0,0,0,0,1.18867,0,0),
 (99255,15,-949.341,7176.31,-8.30242,0,0,0,0,0,0,0,0,0,0,1.39997,0,0),
 (99256,1,-2745.66,6147.62,-1.31319,0,0,0,0,0,0,0,0,0,0,3.78172,0,0),
 (99256,2,-2800.37,6107.17,-2.92752,0,0,0,0,0,0,0,0,0,0,3.81426,0,0),

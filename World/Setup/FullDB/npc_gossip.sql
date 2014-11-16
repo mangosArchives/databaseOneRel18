@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -48,8 +47,7 @@ CREATE TABLE `npc_gossip` (
 
 LOCK TABLES `npc_gossip` WRITE;
 /*!40000 ALTER TABLE `npc_gossip` DISABLE KEYS */;
-INSERT INTO `npc_gossip` (`npc_guid`, `textid`) VALUES
-(2,2282),
+INSERT INTO `npc_gossip` (`npc_guid`, `textid`) VALUES (2,2282),
 (9,2493),
 (29,5054),
 (31,5031),

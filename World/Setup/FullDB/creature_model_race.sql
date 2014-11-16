@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -50,12 +49,15 @@ CREATE TABLE `creature_model_race` (
 
 LOCK TABLES `creature_model_race` WRITE;
 /*!40000 ALTER TABLE `creature_model_race` DISABLE KEYS */;
-INSERT INTO `creature_model_race` (`modelid`, `racemask`, `creature_entry`, `modelid_racial`) VALUES
-(892,690,0,8571),
+INSERT INTO `creature_model_race` (`modelid`, `racemask`, `creature_entry`, `modelid_racial`) VALUES (892,690,0,8571),
 (2281,690,0,2289),
 (15374,690,0,15375),
 (20857,690,0,20872),
-(21243,690,0,21244);
+(21243,690,0,21244),
+(19071,690,0,4590),
+(19073,690,0,4588),
+(19074,690,0,4589),
+(19075,690,0,4587);
 /*!40000 ALTER TABLE `creature_model_race` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

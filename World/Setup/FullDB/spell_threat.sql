@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -50,8 +49,7 @@ CREATE TABLE `spell_threat` (
 
 LOCK TABLES `spell_threat` WRITE;
 /*!40000 ALTER TABLE `spell_threat` DISABLE KEYS */;
-INSERT INTO `spell_threat` (`entry`, `Threat`, `multiplier`, `ap_bonus`) VALUES
-(72,180,1,0),
+INSERT INTO `spell_threat` (`entry`, `Threat`, `multiplier`, `ap_bonus`) VALUES (72,180,1,0),
 (78,20,1,0),
 (99,15,1,0),
 (284,39,1,0),

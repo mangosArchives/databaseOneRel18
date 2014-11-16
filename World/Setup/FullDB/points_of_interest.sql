@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -53,8 +52,7 @@ CREATE TABLE `points_of_interest` (
 
 LOCK TABLES `points_of_interest` WRITE;
 /*!40000 ALTER TABLE `points_of_interest` DISABLE KEYS */;
-INSERT INTO `points_of_interest` (`entry`, `x`, `y`, `icon`, `flags`, `data`, `icon_name`) VALUES
-(1,-9459,42.0805,6,99,0,'Lion\'s Pride Inn'),
+INSERT INTO `points_of_interest` (`entry`, `x`, `y`, `icon`, `flags`, `data`, `icon_name`) VALUES (1,-9459,42.0805,6,99,0,'Lion\'s Pride Inn'),
 (2,-9471,33.4441,6,99,0,'Zaldimar Wefhellt'),
 (3,-9469,108.053,6,99,0,'Brother Wilhelm'),
 (4,-9461,32.996,6,99,0,'Priestess Josetta'),

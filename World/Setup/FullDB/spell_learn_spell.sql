@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -49,8 +48,7 @@ CREATE TABLE `spell_learn_spell` (
 
 LOCK TABLES `spell_learn_spell` WRITE;
 /*!40000 ALTER TABLE `spell_learn_spell` DISABLE KEYS */;
-INSERT INTO `spell_learn_spell` (`entry`, `SpellID`, `Active`) VALUES
-(2842,8681,1),
+INSERT INTO `spell_learn_spell` (`entry`, `SpellID`, `Active`) VALUES (2842,8681,1),
 (5149,1853,1),
 (5149,14922,1),
 (5784,33388,1),

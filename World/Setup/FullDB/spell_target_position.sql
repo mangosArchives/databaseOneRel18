@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -52,8 +51,7 @@ CREATE TABLE `spell_target_position` (
 
 LOCK TABLES `spell_target_position` WRITE;
 /*!40000 ALTER TABLE `spell_target_position` DISABLE KEYS */;
-INSERT INTO `spell_target_position` (`id`, `target_map`, `target_position_x`, `target_position_y`, `target_position_z`, `target_orientation`) VALUES
-(31,0,-9464,62,56,0),
+INSERT INTO `spell_target_position` (`id`, `target_map`, `target_position_x`, `target_position_y`, `target_position_z`, `target_orientation`) VALUES (31,0,-9464,62,56,0),
 (33,0,-10643,1052,34,0),
 (34,0,-10368,-422,66,0),
 (35,0,-9104,-70,83,0),

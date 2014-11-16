@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -54,8 +53,7 @@ CREATE TABLE `creature_addon` (
 
 LOCK TABLES `creature_addon` WRITE;
 /*!40000 ALTER TABLE `creature_addon` DISABLE KEYS */;
-INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES
-(1,0,0,1,16,0,0,NULL),
+INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (1,0,0,1,16,0,0,NULL),
 (2,0,0,1,16,0,0,NULL),
 (3,0,0,1,16,0,0,NULL),
 (4,0,0,1,16,0,0,NULL),
@@ -38780,8 +38778,7 @@ INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_fl
 (44041,0,0,1,16,0,0,NULL),
 (44042,0,0,1,16,0,0,NULL),
 (44043,0,0,1,16,0,0,NULL);
-INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES
-(44044,0,0,1,16,0,0,NULL),
+INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (44044,0,0,1,16,0,0,NULL),
 (44045,0,0,1,16,0,0,NULL),
 (44047,0,0,1,16,0,0,NULL),
 (44048,0,0,1,16,0,0,NULL),

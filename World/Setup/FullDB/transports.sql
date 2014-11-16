@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -49,8 +48,7 @@ CREATE TABLE `transports` (
 
 LOCK TABLES `transports` WRITE;
 /*!40000 ALTER TABLE `transports` DISABLE KEYS */;
-INSERT INTO `transports` (`entry`, `name`, `period`) VALUES
-(20808,'Ratchet and Booty Bay',231236),
+INSERT INTO `transports` (`entry`, `name`, `period`) VALUES (20808,'Ratchet and Booty Bay',231236),
 (164871,'Orgrimmar and Undercity',239334),
 (175080,'Grom\'Gol Base Camp and Orgrimmar',248990),
 (176231,'Menethil Harbor and Theramore Isle',230162),

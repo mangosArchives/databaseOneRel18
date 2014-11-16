@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -51,8 +50,7 @@ CREATE TABLE `conditions` (
 
 LOCK TABLES `conditions` WRITE;
 /*!40000 ALTER TABLE `conditions` DISABLE KEYS */;
-INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`) VALUES
-(1,9,11668,0),
+INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`) VALUES (1,9,11668,0),
 (2,2,11511,1),
 (3,7,197,1),
 (4,7,165,1),

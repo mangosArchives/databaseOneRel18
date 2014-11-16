@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -49,8 +48,7 @@ CREATE TABLE `spell_affect` (
 
 LOCK TABLES `spell_affect` WRITE;
 /*!40000 ALTER TABLE `spell_affect` DISABLE KEYS */;
-INSERT INTO `spell_affect` (`entry`, `effectId`, `SpellFamilyMask`) VALUES
-(5420,2,17669763891408),
+INSERT INTO `spell_affect` (`entry`, `effectId`, `SpellFamilyMask`) VALUES (5420,2,17669763891408),
 (8875,1,4398046511104),
 (11069,0,1),
 (11070,0,32),

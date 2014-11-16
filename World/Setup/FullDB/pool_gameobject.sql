@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -51,8 +50,7 @@ CREATE TABLE `pool_gameobject` (
 
 LOCK TABLES `pool_gameobject` WRITE;
 /*!40000 ALTER TABLE `pool_gameobject` DISABLE KEYS */;
-INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VALUES
-(68000,3000,0,'Mineral Spawn Point 1 - Iron'),
+INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VALUES (68000,3000,0,'Mineral Spawn Point 1 - Iron'),
 (68001,3000,25,'Mineral Spawn Point 1 - Mithril'),
 (68002,3000,10,'Mineral Spawn Point 1 - Gold'),
 (68003,3000,10,'Mineral Spawn Point 1 - Silver'),
@@ -20313,8 +20311,7 @@ INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VA
 (109398,8639,15,'Mineral Spawn Point 111 - Iron'),
 (109399,8639,10,'Mineral Spawn Point 111 - Mithril'),
 (109400,8639,5,'Mineral Spawn Point 111 - Silver');
-INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VALUES
-(109401,8639,5,'Mineral Spawn Point 111 - Gold'),
+INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VALUES (109401,8639,5,'Mineral Spawn Point 111 - Gold'),
 (109402,8640,0,'Mineral Spawn Point 112 - Copper'),
 (109403,8640,20,'Mineral Spawn Point 112 - Tin'),
 (109404,8640,15,'Mineral Spawn Point 112 - Iron'),

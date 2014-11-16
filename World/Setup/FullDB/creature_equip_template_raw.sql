@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -56,8 +55,7 @@ CREATE TABLE `creature_equip_template_raw` (
 
 LOCK TABLES `creature_equip_template_raw` WRITE;
 /*!40000 ALTER TABLE `creature_equip_template_raw` DISABLE KEYS */;
-INSERT INTO `creature_equip_template_raw` (`entry`, `equipmodel1`, `equipmodel2`, `equipmodel3`, `equipinfo1`, `equipinfo2`, `equipinfo3`, `equipslot1`, `equipslot2`, `equipslot3`) VALUES
-(290,7420,7485,0,218171138,218171138,0,3,3,0),
+INSERT INTO `creature_equip_template_raw` (`entry`, `equipmodel1`, `equipmodel2`, `equipmodel3`, `equipinfo1`, `equipinfo2`, `equipinfo3`, `equipslot1`, `equipslot2`, `equipslot3`) VALUES (290,7420,7485,0,218171138,218171138,0,3,3,0),
 (351,7429,0,16751,33488898,0,33492994,781,0,25),
 (352,25366,0,0,50267394,0,0,273,0,0),
 (353,7427,19550,0,33488898,33488898,0,781,781,0),

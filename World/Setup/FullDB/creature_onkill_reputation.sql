@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -56,8 +55,7 @@ CREATE TABLE `creature_onkill_reputation` (
 
 LOCK TABLES `creature_onkill_reputation` WRITE;
 /*!40000 ALTER TABLE `creature_onkill_reputation` DISABLE KEYS */;
-INSERT INTO `creature_onkill_reputation` (`creature_id`, `RewOnKillRepFaction1`, `RewOnKillRepFaction2`, `MaxStanding1`, `IsTeamAward1`, `RewOnKillRepValue1`, `MaxStanding2`, `IsTeamAward2`, `RewOnKillRepValue2`, `TeamDependent`) VALUES
-(674,21,0,5,0,25,0,0,0,0),
+INSERT INTO `creature_onkill_reputation` (`creature_id`, `RewOnKillRepFaction1`, `RewOnKillRepFaction2`, `MaxStanding1`, `IsTeamAward1`, `RewOnKillRepValue1`, `MaxStanding2`, `IsTeamAward2`, `RewOnKillRepValue2`, `TeamDependent`) VALUES (674,21,0,5,0,25,0,0,0,0),
 (675,21,0,5,0,25,0,0,0,0),
 (677,21,0,5,0,25,0,0,0,0),
 (737,87,21,5,0,5,7,0,-25,0),

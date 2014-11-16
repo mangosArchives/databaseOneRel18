@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -50,8 +49,7 @@ CREATE TABLE `mail_level_reward` (
 
 LOCK TABLES `mail_level_reward` WRITE;
 /*!40000 ALTER TABLE `mail_level_reward` DISABLE KEYS */;
-INSERT INTO `mail_level_reward` (`level`, `raceMask`, `mailTemplateId`, `senderEntry`) VALUES
-(30,16,233,4773),
+INSERT INTO `mail_level_reward` (`level`, `raceMask`, `mailTemplateId`, `senderEntry`) VALUES (30,16,233,4773),
 (30,512,232,16280),
 (30,2,231,4752),
 (30,128,230,7953),

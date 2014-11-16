@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -50,8 +49,7 @@ CREATE TABLE `playercreateinfo_spell` (
 
 LOCK TABLES `playercreateinfo_spell` WRITE;
 /*!40000 ALTER TABLE `playercreateinfo_spell` DISABLE KEYS */;
-INSERT INTO `playercreateinfo_spell` (`race`, `class`, `Spell`, `Note`) VALUES
-(1,1,78,'Heroic Strike'),
+INSERT INTO `playercreateinfo_spell` (`race`, `class`, `Spell`, `Note`) VALUES (1,1,78,'Heroic Strike'),
 (1,1,81,'Dodge'),
 (1,1,107,'Block'),
 (1,1,196,'One-Handed Axes'),

@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -54,8 +53,7 @@ CREATE TABLE `playercreateinfo` (
 
 LOCK TABLES `playercreateinfo` WRITE;
 /*!40000 ALTER TABLE `playercreateinfo` DISABLE KEYS */;
-INSERT INTO `playercreateinfo` (`race`, `class`, `map`, `zone`, `position_x`, `position_y`, `position_z`, `orientation`) VALUES
-(1,1,0,12,-8949.95,-132.493,83.5312,0),
+INSERT INTO `playercreateinfo` (`race`, `class`, `map`, `zone`, `position_x`, `position_y`, `position_z`, `orientation`) VALUES (1,1,0,12,-8949.95,-132.493,83.5312,0),
 (1,2,0,12,-8949.95,-132.493,83.5312,0),
 (1,4,0,12,-8949.95,-132.493,83.5312,0),
 (1,5,0,12,-8949.95,-132.493,83.5312,0),

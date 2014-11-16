@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -59,8 +58,7 @@ CREATE TABLE `game_weather` (
 
 LOCK TABLES `game_weather` WRITE;
 /*!40000 ALTER TABLE `game_weather` DISABLE KEYS */;
-INSERT INTO `game_weather` (`zone`, `spring_rain_chance`, `spring_snow_chance`, `spring_storm_chance`, `summer_rain_chance`, `summer_snow_chance`, `summer_storm_chance`, `fall_rain_chance`, `fall_snow_chance`, `fall_storm_chance`, `winter_rain_chance`, `winter_snow_chance`, `winter_storm_chance`) VALUES
-(1,0,25,0,0,15,0,0,25,0,0,25,0),
+INSERT INTO `game_weather` (`zone`, `spring_rain_chance`, `spring_snow_chance`, `spring_storm_chance`, `summer_rain_chance`, `summer_snow_chance`, `summer_storm_chance`, `fall_rain_chance`, `fall_snow_chance`, `fall_storm_chance`, `winter_rain_chance`, `winter_snow_chance`, `winter_storm_chance`) VALUES (1,0,25,0,0,15,0,0,25,0,0,25,0),
 (3,0,0,20,0,0,20,0,0,20,0,0,15),
 (10,15,0,0,15,0,0,20,0,0,15,0,0),
 (11,25,0,0,15,0,0,25,0,0,25,0,0),

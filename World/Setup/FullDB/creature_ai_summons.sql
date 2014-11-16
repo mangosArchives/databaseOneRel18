@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -53,8 +52,7 @@ CREATE TABLE `creature_ai_summons` (
 
 LOCK TABLES `creature_ai_summons` WRITE;
 /*!40000 ALTER TABLE `creature_ai_summons` DISABLE KEYS */;
-INSERT INTO `creature_ai_summons` (`id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `comment`) VALUES
-(1,8074.84,-3840,690.061,4.6,180000,'10727'),
+INSERT INTO `creature_ai_summons` (`id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `comment`) VALUES (1,8074.84,-3840,690.061,4.6,180000,'10727'),
 (2,-472.02,105.823,-94.6299,0.0301925,300000,'5721'),
 (3,-467.099,85.2944,-94.7318,3.95326,300000,'5720'),
 (4,-9967.55,-135.956,24.5909,0.170326,180000,'6846'),

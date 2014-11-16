@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -50,8 +49,7 @@ CREATE TABLE `skill_extra_item_template` (
 
 LOCK TABLES `skill_extra_item_template` WRITE;
 /*!40000 ALTER TABLE `skill_extra_item_template` DISABLE KEYS */;
-INSERT INTO `skill_extra_item_template` (`spellId`, `requiredSpecialization`, `additionalCreateChance`, `additionalMaxNum`) VALUES
-(2329,28677,14,4),
+INSERT INTO `skill_extra_item_template` (`spellId`, `requiredSpecialization`, `additionalCreateChance`, `additionalMaxNum`) VALUES (2329,28677,14,4),
 (2331,28675,14,4),
 (2332,28675,14,4),
 (2333,28677,14,4),

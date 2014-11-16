@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -52,8 +51,7 @@ CREATE TABLE `playercreateinfo_action` (
 
 LOCK TABLES `playercreateinfo_action` WRITE;
 /*!40000 ALTER TABLE `playercreateinfo_action` DISABLE KEYS */;
-INSERT INTO `playercreateinfo_action` (`race`, `class`, `button`, `action`, `type`) VALUES
-(1,1,72,6603,0),
+INSERT INTO `playercreateinfo_action` (`race`, `class`, `button`, `action`, `type`) VALUES (1,1,72,6603,0),
 (1,1,73,78,0),
 (1,1,83,117,128),
 (1,2,0,6603,0),

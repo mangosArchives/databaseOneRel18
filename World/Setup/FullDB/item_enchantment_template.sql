@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -49,8 +48,7 @@ CREATE TABLE `item_enchantment_template` (
 
 LOCK TABLES `item_enchantment_template` WRITE;
 /*!40000 ALTER TABLE `item_enchantment_template` DISABLE KEYS */;
-INSERT INTO `item_enchantment_template` (`entry`, `ench`, `chance`) VALUES
-(61,6,7.73),
+INSERT INTO `item_enchantment_template` (`entry`, `ench`, `chance`) VALUES (61,6,7.73),
 (61,8,7.31),
 (61,9,8.02),
 (61,15,3.01),

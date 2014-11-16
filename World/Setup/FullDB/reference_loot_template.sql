@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -53,8 +52,7 @@ CREATE TABLE `reference_loot_template` (
 
 LOCK TABLES `reference_loot_template` WRITE;
 /*!40000 ALTER TABLE `reference_loot_template` DISABLE KEYS */;
-INSERT INTO `reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES
-(10000,8827,25,1,3,6,0),
+INSERT INTO `reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES (10000,8827,25,1,3,6,0),
 (10000,22578,0,2,2,4,0),
 (10000,24478,0,2,2,3,0),
 (10000,24479,3,2,1,1,0),

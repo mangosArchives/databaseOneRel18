@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -62,8 +61,7 @@ CREATE TABLE `dbscripts_on_go_use` (
 
 LOCK TABLES `dbscripts_on_go_use` WRITE;
 /*!40000 ALTER TABLE `dbscripts_on_go_use` DISABLE KEYS */;
-INSERT INTO `dbscripts_on_go_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
-(11881,0,11,11875,20,0,0,0,0,0,0,0,0,0,0,0,''),
+INSERT INTO `dbscripts_on_go_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES (11881,0,11,11875,20,0,0,0,0,0,0,0,0,0,0,0,''),
 (11894,0,11,11876,300,0,0,0,0,0,0,0,0,0,0,0,''),
 (12148,0,11,30084,15,0,0,0,0,0,0,0,0,0,0,0,''),
 (12609,2,10,12369,300000,0,0,0,0,0,0,0,251.381,2962.47,2.76527,0.860446,''),

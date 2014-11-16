@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -52,8 +51,7 @@ CREATE TABLE `creature_model_info` (
 
 LOCK TABLES `creature_model_info` WRITE;
 /*!40000 ALTER TABLE `creature_model_info` DISABLE KEYS */;
-INSERT INTO `creature_model_info` (`modelid`, `bounding_radius`, `combat_reach`, `gender`, `modelid_other_gender`, `modelid_alternative`) VALUES
-(4,2,3,2,0,0),
+INSERT INTO `creature_model_info` (`modelid`, `bounding_radius`, `combat_reach`, `gender`, `modelid_other_gender`, `modelid_alternative`) VALUES (4,2,3,2,0,0),
 (13,0,0,2,0,0),
 (14,0,0,2,0,0),
 (15,0,0,2,0,0),

@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -48,8 +47,7 @@ CREATE TABLE `battlemaster_entry` (
 
 LOCK TABLES `battlemaster_entry` WRITE;
 /*!40000 ALTER TABLE `battlemaster_entry` DISABLE KEYS */;
-INSERT INTO `battlemaster_entry` (`entry`, `bg_template`) VALUES
-(347,1),
+INSERT INTO `battlemaster_entry` (`entry`, `bg_template`) VALUES (347,1),
 (857,3),
 (907,3),
 (2302,2),

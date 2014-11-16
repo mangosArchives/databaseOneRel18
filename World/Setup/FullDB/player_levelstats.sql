@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -54,8 +53,7 @@ CREATE TABLE `player_levelstats` (
 
 LOCK TABLES `player_levelstats` WRITE;
 /*!40000 ALTER TABLE `player_levelstats` DISABLE KEYS */;
-INSERT INTO `player_levelstats` (`race`, `class`, `level`, `str`, `agi`, `sta`, `inte`, `spi`) VALUES
-(1,1,1,23,20,22,20,20),
+INSERT INTO `player_levelstats` (`race`, `class`, `level`, `str`, `agi`, `sta`, `inte`, `spi`) VALUES (1,1,1,23,20,22,20,20),
 (1,1,2,24,21,23,20,20),
 (1,1,3,26,22,24,20,21),
 (1,1,4,27,22,26,20,21),

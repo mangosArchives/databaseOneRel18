@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -48,8 +47,7 @@ CREATE TABLE `game_event_quest` (
 
 LOCK TABLES `game_event_quest` WRITE;
 /*!40000 ALTER TABLE `game_event_quest` DISABLE KEYS */;
-INSERT INTO `game_event_quest` (`quest`, `event`) VALUES
-(8356,12),
+INSERT INTO `game_event_quest` (`quest`, `event`) VALUES (8356,12),
 (8860,6),
 (8861,6),
 (8980,8),

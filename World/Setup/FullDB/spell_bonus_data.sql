@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -52,8 +51,7 @@ CREATE TABLE `spell_bonus_data` (
 
 LOCK TABLES `spell_bonus_data` WRITE;
 /*!40000 ALTER TABLE `spell_bonus_data` DISABLE KEYS */;
-INSERT INTO `spell_bonus_data` (`entry`, `direct_bonus`, `dot_bonus`, `ap_bonus`, `ap_dot_bonus`, `comments`) VALUES
-(116,0.8143,0,0,0,'Mage - Frost Bolt'),
+INSERT INTO `spell_bonus_data` (`entry`, `direct_bonus`, `dot_bonus`, `ap_bonus`, `ap_dot_bonus`, `comments`) VALUES (116,0.8143,0,0,0,'Mage - Frost Bolt'),
 (120,0.1357,0,0,0,'Mage - Cone of Cold'),
 (133,1,0,0,0,'Mage - Fire Ball'),
 (172,0,0.156,0,0,'Warlock - Corruption'),

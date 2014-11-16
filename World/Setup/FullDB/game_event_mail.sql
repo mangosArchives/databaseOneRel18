@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -51,8 +50,7 @@ CREATE TABLE `game_event_mail` (
 
 LOCK TABLES `game_event_mail` WRITE;
 /*!40000 ALTER TABLE `game_event_mail` DISABLE KEYS */;
-INSERT INTO `game_event_mail` (`event`, `raceMask`, `quest`, `mailTemplateId`, `senderEntry`) VALUES
-(45,1101,12278,197,27487),
+INSERT INTO `game_event_mail` (`event`, `raceMask`, `quest`, `mailTemplateId`, `senderEntry`) VALUES (45,1101,12278,197,27487),
 (45,690,12306,197,27487),
 (46,1101,12278,198,27487),
 (46,690,12306,198,27487),

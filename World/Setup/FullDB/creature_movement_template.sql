@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -64,8 +63,7 @@ CREATE TABLE `creature_movement_template` (
 
 LOCK TABLES `creature_movement_template` WRITE;
 /*!40000 ALTER TABLE `creature_movement_template` DISABLE KEYS */;
-INSERT INTO `creature_movement_template` (`entry`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES
-(391,1,-11391.3,1802.18,7.85603,0,0,0,0,0,0,0,0,0,0,3.62441,0,0),
+INSERT INTO `creature_movement_template` (`entry`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (391,1,-11391.3,1802.18,7.85603,0,0,0,0,0,0,0,0,0,0,3.62441,0,0),
 (391,2,-11399.1,1794,7.92072,0,0,0,0,0,0,0,0,0,0,4.34463,0,0),
 (391,3,-11396.7,1784.32,8.19039,0,0,0,0,0,0,0,0,0,0,4.98787,0,0),
 (391,4,-11391.3,1779.66,8.89632,0,0,0,0,0,0,0,0,0,0,5.56592,0,0),

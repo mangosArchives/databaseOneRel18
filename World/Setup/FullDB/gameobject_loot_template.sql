@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -53,8 +52,7 @@ CREATE TABLE `gameobject_loot_template` (
 
 LOCK TABLES `gameobject_loot_template` WRITE;
 /*!40000 ALTER TABLE `gameobject_loot_template` DISABLE KEYS */;
-INSERT INTO `gameobject_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES
-(167,1349,-100,0,1,1,0),
+INSERT INTO `gameobject_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES (167,1349,-100,0,1,1,0),
 (404,5504,0,2,1,1,0),
 (404,5503,0,2,1,1,0),
 (404,4542,0,4,1,1,0),
@@ -18160,7 +18158,8 @@ INSERT INTO `gameobject_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, 
 (181366,23027,0,2,1,1,0),
 (181366,23071,0,2,1,1,0),
 (181366,12002,100,1,-12002,2,0),
-(181366,23025,0,2,1,1,0);
+(181366,23025,0,2,1,1,0),
+(3239,4883,100,0,1,1,0);
 /*!40000 ALTER TABLE `gameobject_loot_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

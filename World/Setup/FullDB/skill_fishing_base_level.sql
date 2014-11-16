@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -48,8 +47,7 @@ CREATE TABLE `skill_fishing_base_level` (
 
 LOCK TABLES `skill_fishing_base_level` WRITE;
 /*!40000 ALTER TABLE `skill_fishing_base_level` DISABLE KEYS */;
-INSERT INTO `skill_fishing_base_level` (`entry`, `skill`) VALUES
-(1,-70),
+INSERT INTO `skill_fishing_base_level` (`entry`, `skill`) VALUES (1,-70),
 (8,130),
 (10,55),
 (11,55),

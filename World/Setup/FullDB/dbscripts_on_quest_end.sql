@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -62,8 +61,7 @@ CREATE TABLE `dbscripts_on_quest_end` (
 
 LOCK TABLES `dbscripts_on_quest_end` WRITE;
 /*!40000 ALTER TABLE `dbscripts_on_quest_end` DISABLE KEYS */;
-INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `command`, `datalong`, `datalong2`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
-(21,2,0,0,0,0,0,0,2000000059,0,0,0,0,0,0,0,''),
+INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `command`, `datalong`, `datalong2`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES (21,2,0,0,0,0,0,0,2000000059,0,0,0,0,0,0,0,''),
 (21,2,1,113,0,0,0,0,0,0,0,0,0,0,0,0,''),
 (63,0,9,15175,30,0,0,0,0,0,0,0,0,0,0,0,''),
 (63,15,9,15176,180,0,0,0,0,0,0,0,0,0,0,0,''),

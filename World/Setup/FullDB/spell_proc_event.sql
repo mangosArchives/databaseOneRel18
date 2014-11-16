@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -57,8 +56,7 @@ CREATE TABLE `spell_proc_event` (
 
 LOCK TABLES `spell_proc_event` WRITE;
 /*!40000 ALTER TABLE `spell_proc_event` DISABLE KEYS */;
-INSERT INTO `spell_proc_event` (`entry`, `SchoolMask`, `SpellFamilyName`, `SpellFamilyMask0`, `SpellFamilyMask1`, `SpellFamilyMask2`, `procFlags`, `procEx`, `ppmRate`, `CustomChance`, `Cooldown`) VALUES
-(324,127,0,0,0,0,0,0,0,0,3),
+INSERT INTO `spell_proc_event` (`entry`, `SchoolMask`, `SpellFamilyName`, `SpellFamilyMask0`, `SpellFamilyMask1`, `SpellFamilyMask2`, `procFlags`, `procEx`, `ppmRate`, `CustomChance`, `Cooldown`) VALUES (324,127,0,0,0,0,0,0,0,0,3),
 (974,127,0,0,0,0,0,0,0,0,3),
 (2565,127,0,0,0,0,0,64,0,0,0),
 (3232,127,0,0,0,0,0,2,0,0,0),

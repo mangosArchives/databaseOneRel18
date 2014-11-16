@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -48,8 +47,7 @@ CREATE TABLE `player_xp_for_level` (
 
 LOCK TABLES `player_xp_for_level` WRITE;
 /*!40000 ALTER TABLE `player_xp_for_level` DISABLE KEYS */;
-INSERT INTO `player_xp_for_level` (`lvl`, `xp_for_next_level`) VALUES
-(1,400),
+INSERT INTO `player_xp_for_level` (`lvl`, `xp_for_next_level`) VALUES (1,400),
 (2,900),
 (3,1400),
 (4,2100),

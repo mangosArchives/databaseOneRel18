@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -50,8 +49,7 @@ CREATE TABLE `battleground_events` (
 
 LOCK TABLES `battleground_events` WRITE;
 /*!40000 ALTER TABLE `battleground_events` DISABLE KEYS */;
-INSERT INTO `battleground_events` (`map`, `event1`, `event2`, `description`) VALUES
-(30,20,2,'Frostwolf Grave - Alliance Defender Quest 2'),
+INSERT INTO `battleground_events` (`map`, `event1`, `event2`, `description`) VALUES (30,20,2,'Frostwolf Grave - Alliance Defender Quest 2'),
 (30,20,1,'Frostwolf Grave - Alliance Defender Quest 1'),
 (30,20,0,'Frostwolf Grave - Alliance Defender Quest 0'),
 (30,19,7,'Iceblood Grave - Horde Defender Quest 3'),

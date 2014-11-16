@@ -1,6 +1,6 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
+--
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -48,8 +48,7 @@ CREATE TABLE `areatrigger_tavern` (
 
 LOCK TABLES `areatrigger_tavern` WRITE;
 /*!40000 ALTER TABLE `areatrigger_tavern` DISABLE KEYS */;
-INSERT INTO `areatrigger_tavern` (`id`, `name`) VALUES
-(71,'Westfall - Sentinel Hill Inn'),
+INSERT INTO `areatrigger_tavern` (`id`, `name`) VALUES (71,'Westfall - Sentinel Hill Inn'),
 (98,'Nesingwary\'s Expedition'),
 (178,'Strahnbrad'),
 (562,'Elwynn Forest - Goldshire - Lion\'s Pride Inn'),

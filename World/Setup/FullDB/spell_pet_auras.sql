@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -49,8 +48,7 @@ CREATE TABLE `spell_pet_auras` (
 
 LOCK TABLES `spell_pet_auras` WRITE;
 /*!40000 ALTER TABLE `spell_pet_auras` DISABLE KEYS */;
-INSERT INTO `spell_pet_auras` (`spell`, `pet`, `aura`) VALUES
-(19028,0,25228),
+INSERT INTO `spell_pet_auras` (`spell`, `pet`, `aura`) VALUES (19028,0,25228),
 (19578,0,19579),
 (20895,0,24529),
 (23785,416,23759),

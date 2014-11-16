@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -48,8 +47,7 @@ CREATE TABLE `creature_involvedrelation` (
 
 LOCK TABLES `creature_involvedrelation` WRITE;
 /*!40000 ALTER TABLE `creature_involvedrelation` DISABLE KEYS */;
-INSERT INTO `creature_involvedrelation` (`id`, `quest`) VALUES
-(196,33),
+INSERT INTO `creature_involvedrelation` (`id`, `quest`) VALUES (196,33),
 (196,5261),
 (197,7),
 (197,15),

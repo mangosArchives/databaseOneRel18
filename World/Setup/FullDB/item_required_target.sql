@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -49,8 +48,7 @@ CREATE TABLE `item_required_target` (
 
 LOCK TABLES `item_required_target` WRITE;
 /*!40000 ALTER TABLE `item_required_target` DISABLE KEYS */;
-INSERT INTO `item_required_target` (`entry`, `type`, `targetEntry`) VALUES
-(3912,1,2530),
+INSERT INTO `item_required_target` (`entry`, `type`, `targetEntry`) VALUES (3912,1,2530),
 (4479,1,2762),
 (4480,1,2761),
 (4481,1,2760),

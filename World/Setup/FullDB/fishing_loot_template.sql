@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -53,8 +52,7 @@ CREATE TABLE `fishing_loot_template` (
 
 LOCK TABLES `fishing_loot_template` WRITE;
 /*!40000 ALTER TABLE `fishing_loot_template` DISABLE KEYS */;
-INSERT INTO `fishing_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES
-(1,11000,100,1,-11000,1,0),
+INSERT INTO `fishing_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES (1,11000,100,1,-11000,1,0),
 (2,11003,100,1,-11003,1,0),
 (8,11006,100,1,-11006,1,0),
 (10,11004,100,1,-11004,1,0),

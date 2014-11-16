@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -50,8 +49,7 @@ CREATE TABLE `pet_name_generation` (
 
 LOCK TABLES `pet_name_generation` WRITE;
 /*!40000 ALTER TABLE `pet_name_generation` DISABLE KEYS */;
-INSERT INTO `pet_name_generation` (`id`, `word`, `entry`, `half`) VALUES
-(1,'Aba',416,0),
+INSERT INTO `pet_name_generation` (`id`, `word`, `entry`, `half`) VALUES (1,'Aba',416,0),
 (2,'Az',416,0),
 (3,'Bel',416,0),
 (4,'Biz',416,0),

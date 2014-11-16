@@ -1,6 +1,6 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
+--
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -61,8 +61,7 @@ CREATE TABLE `areatrigger_teleport` (
 
 LOCK TABLES `areatrigger_teleport` WRITE;
 /*!40000 ALTER TABLE `areatrigger_teleport` DISABLE KEYS */;
-INSERT INTO `areatrigger_teleport` (`id`, `name`, `required_level`, `required_item`, `required_item2`, `heroic_key`, `heroic_key2`, `required_quest_done`, `required_quest_done_heroic`, `target_map`, `target_position_x`, `target_position_y`, `target_position_z`, `target_orientation`) VALUES
-(45,'Scarlet Monastery - Graveyard (Entrance)',20,0,0,0,0,0,0,189,1688.99,1053.48,18.6775,0.00117),
+INSERT INTO `areatrigger_teleport` (`id`, `name`, `required_level`, `required_item`, `required_item2`, `heroic_key`, `heroic_key2`, `required_quest_done`, `required_quest_done_heroic`, `target_map`, `target_position_x`, `target_position_y`, `target_position_z`, `target_orientation`) VALUES (45,'Scarlet Monastery - Graveyard (Entrance)',20,0,0,0,0,0,0,189,1688.99,1053.48,18.6775,0.00117),
 (78,'DeadMines Entrance',10,0,0,0,0,0,0,36,-16.4,-383.07,61.78,1.86),
 (101,'Stormwind Stockades Entrance',15,0,0,0,0,0,0,34,54.23,0.28,-18.34,6.26),
 (107,'Stormwind Vault Entrance',0,0,0,0,0,0,0,35,-0.91,40.57,-24.23,0),

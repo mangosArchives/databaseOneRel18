@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -52,8 +51,7 @@ CREATE TABLE `npc_trainer_template` (
 
 LOCK TABLES `npc_trainer_template` WRITE;
 /*!40000 ALTER TABLE `npc_trainer_template` DISABLE KEYS */;
-INSERT INTO `npc_trainer_template` (`entry`, `spell`, `spellcost`, `reqskill`, `reqskillvalue`, `reqlevel`) VALUES
-(10,100,100,0,0,4),
+INSERT INTO `npc_trainer_template` (`entry`, `spell`, `spellcost`, `reqskill`, `reqskillvalue`, `reqlevel`) VALUES (10,100,100,0,0,4),
 (10,772,100,0,0,4),
 (10,3127,100,0,0,1),
 (10,6343,100,0,0,6),

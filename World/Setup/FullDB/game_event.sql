@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -53,8 +52,7 @@ CREATE TABLE `game_event` (
 
 LOCK TABLES `game_event` WRITE;
 /*!40000 ALTER TABLE `game_event` DISABLE KEYS */;
-INSERT INTO `game_event` (`entry`, `start_time`, `end_time`, `occurence`, `length`, `holiday`, `description`) VALUES
-(1,'2011-06-21 09:00:00','2020-12-31 08:00:00',525600,20160,341,'Midsummer Fire Festival'),
+INSERT INTO `game_event` (`entry`, `start_time`, `end_time`, `occurence`, `length`, `holiday`, `description`) VALUES (1,'2011-06-21 09:00:00','2020-12-31 08:00:00',525600,20160,341,'Midsummer Fire Festival'),
 (2,'2010-12-15 15:00:00','2020-12-31 08:00:00',525600,25920,141,'Feast of Winter Veil'),
 (3,'2011-02-06 08:01:00','2020-12-31 08:00:00',131040,8638,376,'Darkmoon Faire (Terokkar Forest)'),
 (4,'2011-03-06 08:01:00','2020-12-31 08:00:00',131040,8638,374,'Darkmoon Faire (Elwynn Forest)'),

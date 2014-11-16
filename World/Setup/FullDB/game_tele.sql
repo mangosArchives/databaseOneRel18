@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -53,8 +52,7 @@ CREATE TABLE `game_tele` (
 
 LOCK TABLES `game_tele` WRITE;
 /*!40000 ALTER TABLE `game_tele` DISABLE KEYS */;
-INSERT INTO `game_tele` (`id`, `position_x`, `position_y`, `position_z`, `orientation`, `map`, `name`) VALUES
-(1,1400.61,-1493.87,54.7844,4.08661,0,'RuinsOfAndorhal'),
+INSERT INTO `game_tele` (`id`, `position_x`, `position_y`, `position_z`, `orientation`, `map`, `name`) VALUES (1,1400.61,-1493.87,54.7844,4.08661,0,'RuinsOfAndorhal'),
 (2,1728.65,-1602.25,63.429,1.6558,0,'WesternPlaguelands'),
 (3,659.762,-959.316,164.404,0.433716,0,'Strahnbrad'),
 (4,1269.64,-2556.21,93.6088,0.620623,0,'Scholomance'),

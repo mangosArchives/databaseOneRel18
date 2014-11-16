@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -48,8 +47,7 @@ CREATE TABLE `spell_elixir` (
 
 LOCK TABLES `spell_elixir` WRITE;
 /*!40000 ALTER TABLE `spell_elixir` DISABLE KEYS */;
-INSERT INTO `spell_elixir` (`entry`, `mask`) VALUES
-(673,2),
+INSERT INTO `spell_elixir` (`entry`, `mask`) VALUES (673,2),
 (2367,1),
 (2374,1),
 (2378,2),

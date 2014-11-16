@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -49,8 +48,7 @@ CREATE TABLE `creature_linking` (
 
 LOCK TABLES `creature_linking` WRITE;
 /*!40000 ALTER TABLE `creature_linking` DISABLE KEYS */;
-INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
-(57507,57506,515),
+INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES (57507,57506,515),
 (57527,57528,515),
 (57594,57595,515),
 (57595,57596,515),

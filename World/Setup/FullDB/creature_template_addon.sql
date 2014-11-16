@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -54,8 +53,7 @@ CREATE TABLE `creature_template_addon` (
 
 LOCK TABLES `creature_template_addon` WRITE;
 /*!40000 ALTER TABLE `creature_template_addon` DISABLE KEYS */;
-INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES
-(3,0,0,1,16,0,0,NULL),
+INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (3,0,0,1,16,0,0,NULL),
 (6,0,0,1,16,0,0,NULL),
 (30,0,0,1,16,0,0,NULL),
 (36,0,0,1,16,0,0,NULL),

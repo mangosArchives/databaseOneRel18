@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -52,8 +51,7 @@ CREATE TABLE `npc_vendor_template` (
 
 LOCK TABLES `npc_vendor_template` WRITE;
 /*!40000 ALTER TABLE `npc_vendor_template` DISABLE KEYS */;
-INSERT INTO `npc_vendor_template` (`entry`, `item`, `maxcount`, `incrtime`, `ExtendedCost`, `condition_id`) VALUES
-(1,16302,0,0,0,0),
+INSERT INTO `npc_vendor_template` (`entry`, `item`, `maxcount`, `incrtime`, `ExtendedCost`, `condition_id`) VALUES (1,16302,0,0,0,0),
 (1,16316,0,0,0,0),
 (1,16317,0,0,0,0),
 (1,16318,0,0,0,0),

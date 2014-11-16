@@ -1,6 +1,5 @@
 --
--- Copyright (C) 2005-2013 MaNGOS <http://getmangos.com/>
--- Copyright (C) 2009-2013 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2014 MaNGOS <http://getmangos.eu/>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -49,8 +48,7 @@ CREATE TABLE `skill_discovery_template` (
 
 LOCK TABLES `skill_discovery_template` WRITE;
 /*!40000 ALTER TABLE `skill_discovery_template` DISABLE KEYS */;
-INSERT INTO `skill_discovery_template` (`spellId`, `reqSpell`, `chance`) VALUES
-(28580,0,0.1),
+INSERT INTO `skill_discovery_template` (`spellId`, `reqSpell`, `chance`) VALUES (28580,0,0.1),
 (28581,0,0.1),
 (28582,0,0.1),
 (28583,0,0.1),
