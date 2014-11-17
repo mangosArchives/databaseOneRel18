@@ -34,7 +34,7 @@ mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% creature_templa
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% creature_template_addon >  _full_db\creature_template_addon.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% creature_template_classlevelstats >  _full_db\creature_template_classlevelstats.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% creature_template_spells >  _full_db\creature_template_spells.sql
-REM mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% custom_texts >  _full_db\custom_texts.sql
+mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% custom_texts >  _full_db\custom_texts.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% dbdocsfields >  _full_db\dbdocsfields.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% dbdocsprogressquests >  _full_db\dbdocsprogressquests.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% dbdocstable >  _full_db\dbdocstable.sql
@@ -69,7 +69,7 @@ mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% gameobject_ques
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% gameobject_template >  _full_db\gameobject_template.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% gossip_menu >  _full_db\gossip_menu.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% gossip_menu_option >  _full_db\gossip_menu_option.sql
-REM mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% gossip_texts >  _full_db\gossip_texts.sql
+mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% gossip_texts >  _full_db\gossip_texts.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% instance_template >  _full_db\instance_template.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% item_enchantment_template >  _full_db\item_enchantment_template.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% item_loot_template >  _full_db\item_loot_template.sql
