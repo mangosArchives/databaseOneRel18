@@ -10,10 +10,10 @@ BEGIN
     DECLARE bRollback BOOL  DEFAULT FALSE ;
     DECLARE CONTINUE HANDLER FOR SQLEXCEPTION SET `bRollback` = TRUE;
 
-  SET @cOldRev = 'required_20000_02_Script_Fixes';
+  SET @cOldRev = 'required_20000_03_spell_template';
 
   -- Set the new revision string
-  SET @cNewRev = 'required_20000_03_LBRS_Chamber_of_Battle_replaced_mobs';
+  SET @cNewRev = 'required_20000_04_LBRS_Chamber_of_Battle_replaced_mobs';
 
   -- Set thisRevision to the column name of db_version in the currently selected database
   SET @cThisRev := ((SELECT column_name FROM information_schema.`COLUMNS` WHERE table_name='db_version' AND table_schema=(SELECT DATABASE() AS thisDB FROM DUAL) AND column_name LIKE 'required%'));
