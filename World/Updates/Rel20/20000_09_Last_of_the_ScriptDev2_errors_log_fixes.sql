@@ -10,7 +10,7 @@ BEGIN
     DECLARE bRollback BOOL  DEFAULT FALSE ;
     DECLARE CONTINUE HANDLER FOR SQLEXCEPTION SET `bRollback` = TRUE;
 
-  SET @cOldRev = 'required_20000_08_Missing_script_names_added_to_creature_template_table';
+  SET @cOldRev = 'required_20000_09_Guardian_of_Blizzard_non_combat_fix';
 
   -- Set the new revision string
   SET @cNewRev = 'required_20000_09_Last_of_the_ScriptDev2_errors_log_fixes';
