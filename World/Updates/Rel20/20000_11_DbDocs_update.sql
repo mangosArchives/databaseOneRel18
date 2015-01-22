@@ -2,7 +2,8 @@
 SQLyog Ultimate v11.11 (64 bit)
 MySQL - 5.5.37 : Database - mangos
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -16,7 +17,7 @@ MySQL - 5.5.37 : Database - mangos
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 -- Add the Revision update into the revision column
-INSERT IGNORE INTO db_version SET `Version` = 'MaNGOSZero Database 2.0.11 Rev 20000_11';
+INSERT IGNORE INTO db_version SET `Version` = 'MaNGOSONE Database 2.0.11 Rev 20000_11';
 
 --
 -- Table structure for table `dbdocsfields` 
