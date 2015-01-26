@@ -4,14 +4,15 @@
 [![](/icons/TOOLS.gif)](http://github.com/mangostools)
 [![](/icons/TRACKER.gif)](https://www.getmangos.eu/project.php)
 
-MangosOne World Database
+TBC World Database
 ===
 DEVELOPMENT BRANCH
 ===
  **(Please be aware that this branch is a Work in Progress)**
+
 ### A World Database for TBC Wow
 ----
-A content database for [**MangosOne**][10], and [**World of Warcraft**][50] Client Patch
+A content database for [**TBC**][10] MaNGOS Servers, and [**World of Warcraft**][50] Client Patch
 2.4.3 - [The Burning Crusade][51].
 
 ### How to Install
