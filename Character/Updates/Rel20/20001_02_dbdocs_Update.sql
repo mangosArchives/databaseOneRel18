@@ -1,3 +1,41 @@
+-- --------------------------------------------------------------------------------
+-- This is an attempt to create a full transactional update
+-- --------------------------------------------------------------------------------
+DROP PROCEDURE IF EXISTS `update_mangos`; 
+
+DELIMITER $$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `update_mangos`()
+BEGIN
+    DECLARE bRollback BOOL  DEFAULT FALSE ;
+    DECLARE CONTINUE HANDLER FOR SQLEXCEPTION SET `bRollback` = TRUE;
+
+  SET @cOldRev = 'required_20001_01_pvpstats';
+
+  -- Set the new revision string
+  SET @cNewRev = 'required_20001_02_dbdocs_Update';
+
+  -- Set thisRevision to the column name of character_db_version in the currently selected database
+  SET @cThisRev := ((SELECT column_name FROM information_schema.`COLUMNS` WHERE table_name='character_db_version' AND table_schema=(SELECT DATABASE() AS thisDB FROM DUAL) AND column_name LIKE 'required%'));
+
+ 
+  -- Only Proceed if the old values match
+  IF @cThisRev = @cOldRev THEN
+    -- Make this all a single transaction
+    START TRANSACTION;
+
+    -- Apply the Version Change from Old Version to New Version
+    SET @query = CONCAT('ALTER TABLE character_db_version CHANGE COLUMN ',@cOldRev, ' ' ,@cNewRev,' bit;');
+    PREPARE stmt1 FROM @query;
+    EXECUTE stmt1;
+    DEALLOCATE PREPARE stmt1;
+    -- The Above block is required for making table changes
+
+    -- -- -- -- Normal Update / Insert / Delete statements will go here  -- -- -- -- --
+
+
+
+
 /*
 SQLyog Ultimate v11.11 (64 bit)
 MySQL - 5.5.37 : Database - characters
@@ -39,7 +77,8 @@ CREATE TABLE `dbdocsfields` (
 -- Data for the table `dbdocsfields`
 --
 
-LOCK TABLES `dbdocsfields` WRITE;
+-- LOCK TABLES `dbdocsfields` WRITE; 
+SELECT GET_LOCK('dbdocsfields',10);
 /*!40000 ALTER TABLE `dbdocsfields` DISABLE KEYS */;
 insert  into `dbdocsfields`(`fieldId`,`languageId`,`tableName`,`fieldName`,`fieldComment`,`fieldNotes`) values (1,0,'account','expansion','Which expansion\'s content a user has access to.','The field controls to which expansion\'s content a user has access. By default this is set to 0, allowing access to vanilla WoW content. In mangos-zero, other values can be ignored, since there is no expansion.<br />\r\n¬subtable:2¬\r\n<br />\r\n* Base Game Version of World of Warcraft, otherwise known as Vanilla.\r\n<br />\r\nThe world server will block access to accounts with 0 in this field from accessing the TBC and WotLK areas in-game.\r\n<br />\r\nThe world server will block access to accounts with 1 in this field from accessing the WotLK areas in-game and so on.');
 insert  into `dbdocsfields`(`fieldId`,`languageId`,`tableName`,`fieldName`,`fieldComment`,`fieldNotes`) values (2,0,'auction','auctioneerguid','The GUID of the creature where the auction item was added. (See creature.guid)','The GUID of the creature where the auction item was added. (See creature.guid)');
@@ -420,7 +459,8 @@ insert  into `dbdocsfields`(`fieldId`,`languageId`,`tableName`,`fieldName`,`fiel
 insert  into `dbdocsfields`(`fieldId`,`languageId`,`tableName`,`fieldName`,`fieldComment`,`fieldNotes`) values (377,0,'world','map','The map ID (See Map.dbc)','The map ID (See Map.dbc)');
 
 /*!40000 ALTER TABLE `dbdocsfields` ENABLE KEYS */;
-UNLOCK TABLES;
+SELECT RELEASE_LOCK('dbdocsfields');
+-- UNLOCK TABLES;
 
 --
 -- Table structure for table `dbdocsfields_localised`
@@ -437,11 +477,13 @@ CREATE TABLE `dbdocsfields_localised` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*Data for the table `dbdocsfields_localised` */
-LOCK TABLES `dbdocsfields_localised` WRITE;
+-- LOCK TABLES `dbdocsfields_localised` WRITE;
+SELECT GET_LOCK('dbdocsfields_localised',10);
 /*!40000 ALTER TABLE `dbdocsfields_localised` DISABLE KEYS */;
 
 /*!40000 ALTER TABLE `dbdocsfields_localised` ENABLE KEYS */;
-UNLOCK TABLES;
+SELECT RELEASE_LOCK('dbdocsfields_localised');
+-- UNLOCK TABLES;
 
 --
 -- Table structure for table `dbdocslanguage`
@@ -455,7 +497,8 @@ CREATE TABLE `dbdocslanguage` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `dbdocslanguage` */
-LOCK TABLES `dbdocslanguage` WRITE;
+-- LOCK TABLES `dbdocslanguage` WRITE;
+SELECT GET_LOCK('dbdocslanguage',10);
 /*!40000 ALTER TABLE `dbdocslanguage` DISABLE KEYS */;
 insert  into `dbdocslanguage`(`LanguageId`,`LanguageName`) values (0,'English');
 insert  into `dbdocslanguage`(`LanguageId`,`LanguageName`) values (1,'Korean');
@@ -467,7 +510,8 @@ insert  into `dbdocslanguage`(`LanguageId`,`LanguageName`) values (6,'Spanish (S
 insert  into `dbdocslanguage`(`LanguageId`,`LanguageName`) values (7,'Spanish (Latin America)');
 insert  into `dbdocslanguage`(`LanguageId`,`LanguageName`) values (8,'Russian');
 /*!40000 ALTER TABLE `dbdocslanguage` ENABLE KEYS */;
-UNLOCK TABLES;
+SELECT RELEASE_LOCK('dbdocslanguage');
+-- UNLOCK TABLES;
 
 --
 -- Table structure for table `dbdocssubtables`
@@ -484,7 +528,8 @@ CREATE TABLE `dbdocssubtables` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `dbdocssubtables` */
-LOCK TABLES `dbdocssubtables` WRITE;
+-- LOCK TABLES `dbdocssubtables` WRITE;
+SELECT GET_LOCK('dbdocssubtables',10);
 /*!40000 ALTER TABLE `dbdocssubtables` DISABLE KEYS */;
 insert  into `dbdocssubtables`(`subTableId`,`languageId`,`subTableName`,`subTableContent`,`subTableTemplate`) values (10,0,'Gender','<table border=\'1\' cellspacing=\'1\' cellpadding=\'3\' bgcolor=\'#f0f0f0\'>\r\n<tr bgcolor=\'#f0f0ff\'>\r\n<th><b>Value</b></th>\r\n<th align=\'left\'><b>Gender</b></th>\r\n<tr bgcolor=\'#FFFFEE\'><td align=\'center\' valign=\'middle\'>0</td><td align=\'left\' valign=\'middle\'>Male</td></tr>\r\n<tr bgcolor=\'#FEFEFF\'><td align=\'center\' valign=\'middle\'>\r\n1</td><td align=\'left\' valign=\'middle\'>Female</td></tr>\r\n</table>','Value|<Gender\r\n0|Male\r\n1|Female');
 insert  into `dbdocssubtables`(`subTableId`,`languageId`,`subTableName`,`subTableContent`,`subTableTemplate`) values (11,0,'At Login','<table border=\'1\' cellspacing=\'1\' cellpadding=\'3\' bgcolor=\'#f0f0f0\'>\r\n<tr bgcolor=\'#f0f0ff\'>\r\n<th><b>Value</b></th>\r\n<th align=\'left\'><b>Meaning</b></th>\r\n<tr bgcolor=\'#FFFFEE\'><td align=\'center\' valign=\'middle\'>1</td><td align=\'left\' valign=\'middle\'>Force character to change name</td></tr>\r\n<tr bgcolor=\'#FEFEFF\'><td align=\'center\' valign=\'middle\'>2</td><td align=\'left\' valign=\'middle\'>Reset spells (professions as well)</td></tr>\r\n<tr bgcolor=\'#FFFFEE\'><td align=\'center\' valign=\'middle\'>4</td><td align=\'left\' valign=\'middle\'>Reset talents</td></tr>\r\n<tr bgcolor=\'#FEFEFF\'><td align=\'center\' valign=\'middle\'>8</td><td align=\'left\' valign=\'middle\'>Character Customization enabled</td></tr>\r\n</table>\r\n','Value|<Meaning\r\n1|Force character to change name\r\n2|Reset spells (professions as well)\r\n4|Reset talents\r\n8|Character Customization enabled');
@@ -506,7 +551,8 @@ insert  into `dbdocssubtables`(`subTableId`,`languageId`,`subTableName`,`subTabl
 insert  into `dbdocssubtables`(`subTableId`,`languageId`,`subTableName`,`subTableContent`,`subTableTemplate`) values (27,0,'Cleaning Flags','<table border=\'1\' cellspacing=\'1\' cellpadding=\'3\' bgcolor=\'#f0f0f0\'>\r\n<tr bgcolor=\'#f0f0ff\'>\r\n<th><b>Value</b></th>\r\n<th><b>Enum Name</b></th>\r\n<th align=\'left\'><b>Meaning</b></th>\r\n<tr bgcolor=\'#FFFFEE\'><td align=\'center\' valign=\'middle\'>0x2</td><td align=\'center\' valign=\'middle\'>CLEANING_FLAG_SKILLS</td><td align=\'left\' valign=\'middle\'>Clean out obsolete Skills (See character_skills).</td></tr>\r\n<tr bgcolor=\'#FEFEFF\'><td align=\'center\' valign=\'middle\'>0x4</td><td align=\'center\' valign=\'middle\'>CLEANING_FLAG_SPELLS</td><td align=\'left\' valign=\'middle\'>Clean out obsolete Spells (See character_spells).</td></tr>\r\n</table>\r\n','Value|Enum Name|<Meaning\r\n0x2|CLEANING_FLAG_SKILLS|Clean out obsolete Skills (See character_skills).\r\n0x4|CLEANING_FLAG_SPELLS|Clean out obsolete Spells (See character_spells).');
 
 /*!40000 ALTER TABLE `dbdocssubtables` ENABLE KEYS */;
-UNLOCK TABLES;
+SELECT RELEASE_LOCK('dbdocssubtables');
+-- UNLOCK TABLES;
 
 --
 -- Table structure for table `dbdocssubtables_localised`
@@ -522,10 +568,12 @@ CREATE TABLE `dbdocssubtables_localised` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `dbdocssubtables_localised` */
-LOCK TABLES `dbdocssubtables_localised` WRITE;
+-- LOCK TABLES `dbdocssubtables_localised` WRITE;
+SELECT GET_LOCK('dbdocssubtables_localised',10)
 /*!40000 ALTER TABLE `dbdocssubtables_localised` DISABLE KEYS */;
 /*!40000 ALTER TABLE `dbdocssubtables_localised` ENABLE KEYS */;
-UNLOCK TABLES;
+SELECT RELEASE_LOCK('dbdocssubtables_localised');
+-- UNLOCK TABLES;
 
 --
 -- Table structure for table `dbdocstable`
@@ -547,7 +595,8 @@ CREATE TABLE `dbdocstable` (
 -- Data for the table `dbdocstable`
 --
 
-LOCK TABLES `dbdocstable` WRITE;
+-- LOCK TABLES `dbdocstable` WRITE;
+SELECT GET_LOCK('dbdocstable',10);
 /*!40000 ALTER TABLE `dbdocstable` DISABLE KEYS */;
 insert  into `dbdocstable`(`tableId`,`languageId`,`tableName`,`tableNotes`) values (1,0,'auction','Contains all information about the currently ongoing auctions in the auction houses. It controls what items are put up for auction and who put it up, who is the highest bidder, etc.');
 insert  into `dbdocstable`(`tableId`,`languageId`,`tableName`,`tableNotes`) values (2,0,'bugreport ','This table stores all the Bugs/Suggestions submitted in-game by Players.');
@@ -601,7 +650,8 @@ insert  into `dbdocstable`(`tableId`,`languageId`,`tableName`,`tableNotes`) valu
 insert  into `dbdocstable`(`tableId`,`languageId`,`tableName`,`tableNotes`) values (50,0,'saved_variables','Stores server required values.<br />\r\ni.e. Character Database cleanup flags and Honor Point / Rank reset date\r\n');
 insert  into `dbdocstable`(`tableId`,`languageId`,`tableName`,`tableNotes`) values (51,0,'world','Stores World Status information');
 /*!40000 ALTER TABLE `dbdocstable` ENABLE KEYS */;
-UNLOCK TABLES;
+SELECT RELEASE_LOCK('lock2');
+-- UNLOCK TABLES;
 
 --
 -- Table structure for table `dbdocstable_localised`
@@ -616,10 +666,37 @@ CREATE TABLE `dbdocstable_localised` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*Data for the table `dbdocstable_localised` */
-LOCK TABLES `dbdocstable_localised` WRITE;
+-- LOCK TABLES `dbdocstable_localised` WRITE;
+SELECT GET_LOCK('dbdocstable_localised',10);
 /*!40000 ALTER TABLE `dbdocstable_localised` DISABLE KEYS */;
 /*!40000 ALTER TABLE `dbdocstable_localised` ENABLE KEYS */;
-UNLOCK TABLES;
+SELECT RELEASE_LOCK('dbdocstable_localised');
+-- UNLOCK TABLES;
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+
+    -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+    
+    -- If we get here ok, commit the changes
+    IF bRollback = TRUE THEN
+      ROLLBACK;
+      SELECT '* UPDATE FAILED *' AS 'Status',@cThisRev AS 'DB is on Version';
+    ELSE
+      COMMIT;
+      SELECT '* UPDATE COMPLETE *' AS 'Status',@cNewRev AS 'DB is now on Version';
+    END IF;
+  ELSE
+    SELECT '* UPDATE SKIPPED *' AS 'Status',@cOldRev AS 'Required Version',@cThisRev AS 'Found Version';
+  END IF;
+
+END $$
+
+DELIMITER ;
+
+-- Execute the procedure
+CALL update_mangos();
+
+-- Drop the procedure
+DROP PROCEDURE IF EXISTS `update_mangos`; 
