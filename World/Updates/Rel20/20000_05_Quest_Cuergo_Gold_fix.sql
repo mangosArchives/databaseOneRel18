@@ -33,9 +33,6 @@ BEGIN
 
     -- -- -- -- Normal Update / Insert / Delete statements will go here  -- -- -- -- --
 
-    -- Add the Revision update into the revision column
-    INSERT IGNORE INTO db_version SET `Version` = 'MaNGOSZero Database 2.0.11 Rev 20006_02';
-
     -- Cuergo's Gold fix to spawn pirates and chest
 
     -- Set the chance for the key to drop to 100%
