@@ -13,7 +13,7 @@ BEGIN
   SET @cOldRev = 'required_20000_09_Guardian_of_Blizzard_non_combat_fix';
 
   -- Set the new revision string
-  SET @cNewRev = 'required_20000_09_Last_of_the_ScriptDev2_errors_log_fixes';
+  SET @cNewRev = 'required_20000_10_Last_of_the_ScriptDev2_errors_log_fixes';
 
   -- Set thisRevision to the column name of db_version in the currently selected database
   SET @cThisRev := ((SELECT column_name FROM information_schema.`COLUMNS` WHERE table_name='db_version' AND table_schema=(SELECT DATABASE() AS thisDB FROM DUAL) AND column_name LIKE 'required%'));

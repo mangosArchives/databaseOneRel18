@@ -15,8 +15,8 @@ BEGIN
   -- Set the new revision string
   SET @cNewRev = 'required_20001_01_pvpstats';
 
-  -- Set thisRevision to the column name of db_version in the currently selected database
-  SET @cThisRev := ((SELECT column_name FROM information_schema.`COLUMNS` WHERE table_name='db_version' AND table_schema=(SELECT DATABASE() AS thisDB FROM DUAL) AND column_name LIKE 'required%'));
+  -- Set thisRevision to the column name of character_db_version in the currently selected database
+  SET @cThisRev := ((SELECT column_name FROM information_schema.`COLUMNS` WHERE table_name='character_db_version' AND table_schema=(SELECT DATABASE() AS thisDB FROM DUAL) AND column_name LIKE 'required%'));
 
  
   -- Only Proceed if the old values match
@@ -25,7 +25,7 @@ BEGIN
     START TRANSACTION;
 
     -- Apply the Version Change from Old Version to New Version
-    SET @query = CONCAT('ALTER TABLE db_version CHANGE COLUMN ',@cOldRev, ' ' ,@cNewRev,' bit;');
+    SET @query = CONCAT('ALTER TABLE character_db_version CHANGE COLUMN ',@cOldRev, ' ' ,@cNewRev,' bit;');
     PREPARE stmt1 FROM @query;
     EXECUTE stmt1;
     DEALLOCATE PREPARE stmt1;

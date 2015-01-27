@@ -10,10 +10,10 @@ BEGIN
     DECLARE bRollback BOOL  DEFAULT FALSE ;
     DECLARE CONTINUE HANDLER FOR SQLEXCEPTION SET `bRollback` = TRUE;
 
-  SET @cOldRev = 'required_20000_09_Last_of_the_ScriptDev2_errors_log_fixes';
+  SET @cOldRev = 'required_20000_10_Last_of_the_ScriptDev2_errors_log_fixes';
 
   -- Set the new revision string
-  SET @cNewRev = 'required_20000_10_Bladespire_Ogres_creature_ai_scripts_added';
+  SET @cNewRev = 'required_20000_11_Bladespire_Ogres_creature_ai_scripts_added';
 
   -- Set thisRevision to the column name of db_version in the currently selected database
   SET @cThisRev := ((SELECT column_name FROM information_schema.`COLUMNS` WHERE table_name='db_version' AND table_schema=(SELECT DATABASE() AS thisDB FROM DUAL) AND column_name LIKE 'required%'));
@@ -52,7 +52,7 @@ BEGIN
     DELETE FROM creature_ai_scripts WHERE creature_id = 20334;
     INSERT INTO creature_ai_scripts (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES ('2033401', '20334', '1', '0', '100', '1', '500', '800', '600000', '600000', '11', '35240', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', 'Bladespire Cook - Cast Bloodmaul Intoxication');
     INSERT INTO creature_ai_scripts (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES ('2033402', '20334', '0', '0', '100', '1', '2100', '6100', '14100', '20100', '11', '37597', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Bladespire Cook - Cast Meat Slap');
-    INSERT INTO `mangosOne`.`creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES ('2033403', '20334', '0', '0', '100', '1', '1000', '5000', '40000', '45000', '11', '37596', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Bladespire Cook - Cast Tenderize');
+    INSERT INTO creature_ai_scripts (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES ('2033403', '20334', '0', '0', '100', '1', '1000', '5000', '40000', '45000', '11', '37596', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Bladespire Cook - Cast Tenderize');
 
     -- Bladespire Champion: Entry: 21296
     -- http://www.wowhead.com/npc=21296#abilities
