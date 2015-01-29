@@ -41,19 +41,19 @@ BEGIN
     DELETE FROM `dbscripts_on_event` WHERE `id`=10675;
     INSERT INTO `dbscripts_on_event` (`id`,`delay`,`command`,`data_flags`,`buddy_entry`,`search_radius`,`datalong`,`datalong2`,`dataint`,`dataint2`,`x`,`y`,`z`,`o`,`comments`) VALUES
     (10675, 0, 10, 0, 0, 0, 17243, 150000, 0, 0, -5052.76,-11247.859,0.1626,3.287,'Summon Engineer Overgrind'),
-    (10675, 0, 32, 3, 17318, 50, 1, 0, 0, 0, 0., 0., 0., 0., 'Geezle pause WP movement'),
-    (10675, 1,  3, 3, 17243, 50, 200, 0, 0, 0, -5086.87,-11252.8,0.16256, 3.361,'Overgrind walk to meeting place'),
-    (10675,12,  0, 3, 17243, 50, 0, 0, @STRING_ID, 0, 0., 0., 0., 0., 'Overgrind emote - flag pickup'),
-    (10675,14,  0, 3, 17318, 50, 0, 0, @STRING_ID+1, 0, 0., 0., 0., 0., 'Geezle say1'),
-    (10675,20,  0, 3, 17243, 50, 0, 0, @STRING_ID+2, 0, 0., 0., 0., 0., 'Overgrind say2'),
-    (10675,28,  0, 3, 17243, 50, 0, 0, @STRING_ID+3, 0, 0., 0., 0., 0., 'Overgrind say3'),
-    (10675,36,  0, 3, 17318, 50, 0, 0, @STRING_ID+4, 0, 0., 0., 0., 0., 'Geezle say4'),
-    (10675,44,  0, 3, 17243, 50, 0, 0, @STRING_ID+5, 0, 0., 0., 0., 0., 'Overgrind say5'),
-    (10675,52,  0, 3, 17243, 50, 0, 0, @STRING_ID+6, 0, 0., 0., 0., 0., 'Overgrind say6'),
-    (10675,60,  0, 3, 17318, 50, 0, 0, @STRING_ID+7, 0, 0., 0., 0., 0., 'Geezle say7'),
-    (10675,66, 18, 7, 17243, 50, 0, 0, 0, 0, 0., 0., 0., 0., 'Despawn Engineer Overgrind'),
-    (10675,67, 32, 3, 17318, 50, 0, 0, 0, 0, 0., 0., 0., 0., 'Geezle restore WP movement'),
-    (10675,67,  8, 0, 0, 0, 17243, 0, 0, 0, 0., 0., 0., 0., 'Quest 9531 Kill Credit 17243');
+    (10675, 0, 32, 3, 17318, 50, 1, 0, 0, 0, 0, 0, 0, 0, 'Geezle pause WP movement'),
+    (10675, 1,  3, 3, 17243, 50, 200, 0, 0, 0, -5086.87,-11252.8,016256, 3.361,'Overgrind walk to meeting place'),
+    (10675,12,  0, 3, 17243, 50, 0, 0, @STRING_ID, 0, 0, 0, 0, 0, 'Overgrind emote - flag pickup'),
+    (10675,14,  0, 3, 17318, 50, 0, 0, @STRING_ID+1, 0, 0, 0, 0, 0, 'Geezle say1'),
+    (10675,20,  0, 3, 17243, 50, 0, 0, @STRING_ID+2, 0, 0, 0, 0, 0, 'Overgrind say2'),
+    (10675,28,  0, 3, 17243, 50, 0, 0, @STRING_ID+3, 0, 0, 0, 0, 0, 'Overgrind say3'),
+    (10675,36,  0, 3, 17318, 50, 0, 0, @STRING_ID+4, 0, 0, 0, 0, 0, 'Geezle say4'),
+    (10675,44,  0, 3, 17243, 50, 0, 0, @STRING_ID+5, 0, 0, 0, 0, 0, 'Overgrind say5'),
+    (10675,52,  0, 3, 17243, 50, 0, 0, @STRING_ID+6, 0, 0, 0, 0, 0, 'Overgrind say6'),
+    (10675,60,  0, 3, 17318, 50, 0, 0, @STRING_ID+7, 0, 0, 0, 0, 0, 'Geezle say7'),
+    (10675,66, 18, 7, 17243, 50, 0, 0, 0, 0, 0, 0, 0, 0, 'Despawn Engineer Overgrind'),
+    (10675,67, 32, 3, 17318, 50, 0, 0, 0, 0, 0, 0, 0, 0, 'Geezle restore WP movement'),
+    (10675,67,  8, 0, 0, 0, 17243, 0, 0, 0, 0, 0, 0, 0, 'Quest 9531 Kill Credit 17243');
     
     DELETE FROM `db_script_string` WHERE `entry` BETWEEN @STRING_ID AND @STRING_ID+7;
     INSERT INTO `db_script_string` (`entry`,`content_default`,`type`,`emote`,`comment`) VALUES
