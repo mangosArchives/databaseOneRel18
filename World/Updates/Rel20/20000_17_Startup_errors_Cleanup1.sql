@@ -10,10 +10,10 @@ BEGIN
     DECLARE bRollback BOOL  DEFAULT FALSE ;
     DECLARE CONTINUE HANDLER FOR SQLEXCEPTION SET `bRollback` = TRUE;
 
-  SET @cOldRev = 'required_20000_13_Missing_Developer_Items_Added'; -- no revision update in file 20000_12_DbDocs_update.sql
+  SET @cOldRev = 'required_20000_16_Missing_Developer_Items_Added';
 
   -- Set the new revision string
-  SET @cNewRev = 'required_20000_14_Startup_errors_Cleanup1';
+  SET @cNewRev = 'required_20000_17_Startup_errors_Cleanup1';
 
   -- Set thisRevision to the column name of db_version in the currently selected database
   SET @cThisRev := ((SELECT column_name FROM information_schema.`COLUMNS` WHERE table_name='db_version' AND table_schema=(SELECT DATABASE() AS thisDB FROM DUAL) AND column_name LIKE 'required%'));
