@@ -10,7 +10,7 @@ BEGIN
     DECLARE bRollback BOOL  DEFAULT FALSE ;
     DECLARE CONTINUE HANDLER FOR SQLEXCEPTION SET `bRollback` = TRUE;
 
-  SET @cOldRev = 'required_20000_07_Nonexistent_Script_Names_Removed';
+  SET @cOldRev = 'required_20000_08_Missing_script_names_added';
 
   -- Set the new revision string
   SET @cNewRev = 'required_20000_08_Tutenkash_Gong_scripted';
