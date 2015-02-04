@@ -36,8 +36,8 @@ BEGIN
     
     -- World-database.log start up error fixes
         
-    UPDATE creature_template SET RegenerateStats=1 WHERE UnitClass IN (1, 4);
-    UPDATE creature_template SET RegenerateStats=2 WHERE UnitClass IN (2, 8);
+    UPDATE creature_template SET RegenerateStats=1 WHERE UnitClass IN (1, 4) AND RegenerateStats != 0;
+    UPDATE creature_template SET RegenerateStats=RegenerateStats|2 WHERE UnitClass IN (2, 8);
 
     UPDATE creature SET curhealth=8352 WHERE guid=45758;
     UPDATE creature SET curhealth=8613 WHERE guid IN (45760, 45812);
