@@ -13,7 +13,7 @@ BEGIN
   SET @cOldRev = 'required_20000_21_Fixes_To_The_Regen_Corrections'; 
 
   -- Set the new revision string
-  SET @cNewRev = 'required_20000_22_ACID_Updates_for_Classic_WoW';
+  SET @cNewRev = 'required_20000_22_ACID_Updates_for_TBC_WoW';
 
   -- Set thisRevision to the column name of db_version in the currently selected database
   SET @cThisRev := ((SELECT column_name FROM information_schema.`COLUMNS` WHERE table_name='db_version' AND table_schema=(SELECT DATABASE() AS thisDB FROM DUAL) AND column_name LIKE 'required%'));
