@@ -33,7 +33,7 @@ BEGIN
 
     -- -- -- -- Normal Update / Insert / Delete statements will go here  -- -- -- -- --
 
------------- Last of the start up errors, as of the 5th of February 2015    
+-- ---------- Last of the start up errors, as of the 5th of February 2015    
 
 -- Missing weapon entries for creatures
 DELETE FROM creature_item_template WHERE entry = 23051;
