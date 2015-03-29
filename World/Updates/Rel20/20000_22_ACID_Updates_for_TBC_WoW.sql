@@ -1,3 +1,12 @@
+-- -----------------------------------
+-- Added to prevent timeout's while loading
+-- -----------------------------------
+SET GLOBAL net_read_timeout=30;
+SET GLOBAL net_write_timeout=60;
+SET GLOBAL net_buffer_length=1000000; 
+SET GLOBAL max_allowed_packet=1000000000;
+SET GLOBAL connect_timeout=10000000;
+
 -- --------------------------------------------------------------------------------
 -- This is an attempt to create a full transactional update
 -- --------------------------------------------------------------------------------
@@ -848,7 +857,7 @@ REPLACE INTO`creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('1512802','15128','0','0','100','1','6000','11000','19000','25000','11','11972','1','1','0','0','0','0','0','0','0','0','Defiler Elite - Cast Shield Bash'),
 -- League of Arathor Elite
 ('1513001','15130','0','0','100','1','3000','5000','5000','7000','11','15284','1','0','0','0','0','0','0','0','0','0','League of Arathor Elite - Cast Cleave'),
-('1513002','15130','9','0','100','1','0','5','13000','16000','11','11972','1','1','0','0','0','0','0','0','0','0','League of Arathor Elite - Cast Shield Bash'),
+('1513002','15130','9','0','100','1','0','5','13000','16000','11','11972','1','1','0','0','0','0','0','0','0','0','League of Arathor Elite - Cast Shield Bash');
 -- Hammerfall Elite (15136) - NSR
 -- Midsummer Celebrant (16781) - NSR
 -- Sir Maximus Adams (19855) - NSR
@@ -859,7 +868,7 @@ REPLACE INTO`creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Flame Eater (25994) - NSR
 -- Wisp of Ragnaros (26502) - NSR
 
-
+REPLACE INTO`creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inverse_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action1_type`,`action1_param1`,`action1_param2`,`action1_param3`,`action2_type`,`action2_param1`,`action2_param2`,`action2_param3`,`action3_type`,`action3_param1`,`action3_param2`,`action3_param3`,`comment`) VALUES
 
 -- ========
 -- Badlands
@@ -1798,12 +1807,13 @@ REPLACE INTO`creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Midsummer Celebrant (16781) - NSR
 -- Anvilrage Taskmaster
 ('2481801','24818','9','0','100','1','0','5','6000','9000','11','11976','1','0','0','0','0','0','0','0','0','0','Anvilrage Taskmaster - Cast Strike'),
-('2481802','24818','2','0','100','0','20','0','0','0','11','13589','0','1','0','0','0','0','0','0','0','0','Anvilrage Taskmaster - Cast Haste Aura at 20% HP'),
+('2481802','24818','2','0','100','0','20','0','0','0','11','13589','0','1','0','0','0','0','0','0','0','0','Anvilrage Taskmaster - Cast Haste Aura at 20% HP');
 -- Burning Steppes Flame Warden (25892) - NSR
 -- Burning Steppes Flame Keeper (25927) - NSR
 -- Wisp of Ragnaros (26502) - NSR
 
 
+REPLACE INTO`creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inverse_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action1_type`,`action1_param1`,`action1_param2`,`action1_param3`,`action2_type`,`action2_param1`,`action2_param2`,`action2_param3`,`action3_type`,`action3_param1`,`action3_param2`,`action3_param3`,`comment`) VALUES
 
 -- =============
 -- Deadwind Pass
@@ -16016,7 +16026,7 @@ REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inver
 -- Overlord Runthak 
 ('1439201','14392','0','0','100','1','3000','6000','5000','7000','11','15580','1','0','0','0','0','0','0','0','0','0','Overlord Runthak - Cast Strike'),
 ('1439202','14392','0','0','100','1','6000','10000','9000','17000','11','16509','4','32','0','0','0','0','0','0','0','0','Overlord Runthak - Cast Rend'),
-('1439203','14392','0','0','100','1','12000','16000','16000','21000','11','16508','1','0','0','0','0','0','0','0','0','0','Overlord Runthak - Cast Intimidating Roar'),
+('1439203','14392','0','0','100','1','12000','16000','16000','21000','11','16508','1','0','0','0','0','0','0','0','0','0','Overlord Runthak - Cast Intimidating Roar');
 -- Orphan Matron Battlewail 14451     
 -- Alowicious Czervik 14480     
 -- Tosamina 14498     
@@ -16130,6 +16140,7 @@ REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inver
 -- Grand Apothecary Putress 28318     
    
 
+REPLACE INTO`creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inverse_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action1_type`,`action1_param1`,`action1_param2`,`action1_param3`,`action2_type`,`action2_param1`,`action2_param2`,`action2_param3`,`action3_type`,`action3_param1`,`action3_param2`,`action3_param3`,`comment`) VALUES
 
 -- ========
 -- Silithus
@@ -21782,9 +21793,10 @@ REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inver
 ('1870205','18702','14','0','100','3','1000','15','15700','26500','11','33325','0','1','0','0','0','0','0','0','0','0','Auchenai Necromancer (Normal) - Cast Shadow Mend on Friendlies'),
 ('1870206','18702','14','0','100','5','2500','15','6100','8400','11','37367','0','1','0','0','0','0','0','0','0','0','Auchenai Necromancer (Heroic) - Cast Shadow Mend on Friendlies'),
 -- D'ore (4.3.4 Official Data - Normal/Heroic)
-('1941201','19412','11','0','100','6','0','0','0','0','1','-840','0','0','11','7765','0','0','0','0','0','0','D\'ore - Text Emote and Cast Projection on Spawn'),
+('1941201','19412','11','0','100','6','0','0','0','0','1','-840','0','0','11','7765','0','0','0','0','0','0','D\'ore - Text Emote and Cast Projection on Spawn');
 
 
+REPLACE INTO`creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inverse_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action1_type`,`action1_param1`,`action1_param2`,`action1_param3`,`action2_type`,`action2_param1`,`action2_param2`,`action2_param3`,`action3_type`,`action3_param1`,`action3_param2`,`action3_param3`,`comment`) VALUES
 
 -- ==============================================================
 -- Auchindoun: Mana-Tombs - (4.3.4 Official Data - Normal/Heroic) - 100% Scripted From Official Data
@@ -27518,13 +27530,14 @@ REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inver
 ('2099002','20990','0','0','100','5','8400','19300','7200','19300','11','38921','1','0','0','0','0','0','0','0','0','0','Bloodwarder Physician (Heroic) - Cast Holy Shock'),
 ('2099003','20990','14','0','100','3','6300','15','10000','16000','11','36348','6','1','0','0','0','0','0','0','0','0','Bloodwarder Physician (Normal) - Cast Bandage on Friendlies'),
 ('2099004','20990','14','0','100','5','7100','15','10000','16000','11','38919','6','1','0','0','0','0','0','0','0','0','Bloodwarder Physician (Heroic) - Cast Bandage on Friendlies'),
-('2099005','20990','0','0','100','7','9000','14000','12000','16000','11','36333','5','1','0','0','0','0','0','0','0','0','Bloodwarder Physician - Cast Anesthetic'),
+('2099005','20990','0','0','100','7','9000','14000','12000','16000','11','36333','5','1','0','0','0','0','0','0','0','0','Bloodwarder Physician - Cast Anesthetic');
 -- Nether Wraith (21062) - mob_nether_wraith
 -- Lucky (23198) - NSR
 -- Dancing Flames (25305) - npc_dancing_flames
 -- Spirit Wolf (29264) - NSR
 
 
+REPLACE INTO`creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inverse_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action1_type`,`action1_param1`,`action1_param2`,`action1_param3`,`action2_type`,`action2_param1`,`action2_param2`,`action2_param3`,`action3_type`,`action3_param1`,`action3_param2`,`action3_param3`,`comment`) VALUES
 
 
 -- =============
@@ -29808,7 +29821,7 @@ REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inver
 -- Lord Robin Daris (SD2 Backport)
 ('1987601','19876','0','0','100','3','5000','7000','7000','11000','11','9080','1','0','0','0','0','0','0','0','0','0','Lord Robin Daris - Cast Hamstring'),
 ('1987602','19876','0','0','100','3','8000','10000','14000','18000','11','29572','1','0','0','0','0','0','0','0','0','0','Lord Robin Daris - Cast Mortal Strike'),
-('1987603','19876','0','0','100','3','15000','20000','15000','20000','11','29573','0','0','0','0','0','0','0','0','0','0','Lord Robin Daris - Cast Whirlwind'),
+('1987603','19876','0','0','100','3','15000','20000','15000','20000','11','29573','0','0','0','0','0','0','0','0','0','0','Lord Robin Daris - Cast Whirlwind');
 -- Conjured Water Elemental (21160) - NSR
 -- Human Charger (21664) - NSR
 -- Human Cleric (21682) - NSR
@@ -29826,6 +29839,7 @@ REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inver
 -- Elwynn Forest Wolf (33286) - NSR
 
 
+REPLACE INTO`creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inverse_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action1_type`,`action1_param1`,`action1_param2`,`action1_param3`,`action2_type`,`action2_param1`,`action2_param2`,`action2_param3`,`action3_type`,`action3_param1`,`action3_param2`,`action3_param3`,`comment`) VALUES
 
 -- ===========
 -- Molten Core
