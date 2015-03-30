@@ -44,7 +44,7 @@ UPDATE creature_equip_template SET equipentry1=23051, equipentry2=23051, equipen
 DELETE FROM creature_equip_template WHERE entry = 5030;
 UPDATE creature_template SET EquipmentTemplateId = 0 WHERE entry = 16679;
 
-DELETE FROM creature_equip_template WHERE entry IN (23889, 28023, 32826, 31083, 29626, 23907, 24038, 1219);
+DELETE FROM creature_item_template WHERE entry IN (23889, 28023, 32826, 31083, 29626, 23907, 24038, 1219);
 -- missing entry for Flight Master's weapon
 INSERT INTO creature_item_template (entry, class, subclass, material, displayid, inventory_type, sheath_type) VALUES (23889, 2, 2, 2, 36600, 15, 0);
 -- missing entry for axe throwers at portal
