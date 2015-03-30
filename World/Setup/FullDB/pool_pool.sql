@@ -5911,7 +5911,7 @@ INSERT INTO `pool_pool` (`pool_id`, `mother_pool`, `chance`, `description`) VALU
 (12262,2068,0,'Shadowmoon Valley mineral, node 126'),
 (12263,2068,0,'Shadowmoon Valley mineral, node 127'),
 (12264,2068,0,'Shadowmoon Valley mineral, node 128'),
-(12265,12265,0,'Kobold Tunneler - Fargodeep Mine');
+(12265,1000,0,'Kobold Tunneler - Fargodeep Mine');
 /*!40000 ALTER TABLE `pool_pool` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
