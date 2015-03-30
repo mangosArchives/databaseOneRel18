@@ -9096,9 +9096,9 @@ REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inver
 ('2450101','24501','4','0','100','0','0','0','0','0','12','7980','1','300000','0','0','0','0','0','0','0','0','Drohn\'s Distillery Apprentice - Summon Deathguard Elite on Aggro'),
 -- Dancing Flames (25305) - npc_dancing_flames
 -- Edward Cairn      
-('2909501','29095','4','0','100','0','0','0','0','0','12','7980','1','300000','0','0','0','0','0','0','0','0','Edward Cairn - Summon Deathguard Elite on Aggro'),
+('2909501','29095','4','0','100','0','0','0','0','0','12','7980','1','300000','0','0','0','0','0','0','0','0','Edward Cairn - Summon Deathguard Elite on Aggro');
 
-
+REPLACE INTO`creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inverse_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action1_type`,`action1_param1`,`action1_param2`,`action1_param3`,`action2_type`,`action2_param1`,`action2_param2`,`action2_param3`,`action3_type`,`action3_param1`,`action3_param2`,`action3_param3`,`comment`) VALUES
 
 -- ===================
 -- Western Plaguelands
@@ -9589,7 +9589,7 @@ REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inver
 ('1242501','12425','9','0','100','1','0','5','7000','11000','11','12540','1','0','0','0','0','0','0','0','0','0','Flint Shadowmore - Cast Gouge'),
 ('1242502','12425','9','0','100','1','0','5','60000','60000','11','6434','0','1','0','0','0','0','0','0','0','0','Flint Shadowmore - Cast Slice and Dice'),
 -- Bibilfaz Featherwhistle
-('1259601','12596','4','0','100','0','0','0','0','0','12','9526','1','30000','12','9526','1','30000','1','-549','0','0','Bibilfaz Featherwhistle - Summon Enraged Gryphons and Yell on Aggro'),
+('1259601','12596','4','0','100','0','0','0','0','0','12','9526','1','30000','12','9526','1','30000','1','-549','0','0','Bibilfaz Featherwhistle - Summon Enraged Gryphons and Yell on Aggro');
 -- Leonard Porter (12942) - NSR
 -- Elder Meadowrun (15602) - NSR
 -- Midsummer Celebrant (16781) - NSR
@@ -9599,6 +9599,7 @@ REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inver
 -- Fire Eater (25962) - NSR
 -- Summer Scorchling (26401) - NSR
 
+REPLACE INTO`creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inverse_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action1_type`,`action1_param1`,`action1_param2`,`action1_param3`,`action2_type`,`action2_param1`,`action2_param2`,`action2_param3`,`action3_type`,`action3_param1`,`action3_param2`,`action3_param3`,`comment`) VALUES
 
 
 -- ========
@@ -9900,8 +9901,9 @@ REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inver
 -- Defias Raider (2.4.3 Official Data)
 ('618001','6180','0','0','100','0','1000','1000','0','0','11','7165','0','0','0','0','0','0','0','0','0','0','Defias Raider - Cast Battle Stance'),
 ('618002','6180','0','0','100','1','5000','7500','12500','15000','11','25710','1','0','0','0','0','0','0','0','0','0','Defias Raider - Cast Heroic Strike'),
-('618003','6180','2','0','100','0','15','0','0','0','25','0','0','0','1','-47','0','0','0','0','0','0','Defias Raider - Flee at 15% HP'),
+('618003','6180','2','0','100','0','15','0','0','0','25','0','0','0','1','-47','0','0','0','0','0','0','Defias Raider - Flee at 15% HP');
 
+REPLACE INTO`creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inverse_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action1_type`,`action1_param1`,`action1_param2`,`action1_param3`,`action2_type`,`action2_param1`,`action2_param2`,`action2_param3`,`action3_type`,`action3_param1`,`action3_param2`,`action3_param3`,`comment`) VALUES
 
 
 -- ==============================
@@ -11745,7 +11747,7 @@ REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inver
 -- Apprentice Vishael (20233) - NSR
 -- Stormwind Marine
 ('2055601','20556','9','0','100','1','0','5','8000','12000','11','12170','1','0','0','0','0','0','0','0','0','0','Stormwind Marine - Cast Revenge'),
-('2055602','20556','0','0','100','1','3000','5000','9000','14000','11','12169','0','1','0','0','0','0','0','0','0','0','Stormwind Marine - Cast Shield Block'),
+('2055602','20556','0','0','100','1','3000','5000','9000','14000','11','12169','0','1','0','0','0','0','0','0','0','0','Stormwind Marine - Cast Shield Block');
 -- Great Blue Elekk (20848) - NSR
 -- Great Purple Elekk (20850) - NSR
 -- Crusty Bob (21376) - NSR
@@ -11760,6 +11762,7 @@ REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inver
 -- Fight Promoter (26760) - npc_innkeeper
 -- Plagued Resident (27848) - NSR
 
+REPLACE INTO`creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inverse_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action1_type`,`action1_param1`,`action1_param2`,`action1_param3`,`action2_type`,`action2_param1`,`action2_param2`,`action2_param3`,`action3_type`,`action3_param1`,`action3_param2`,`action3_param3`,`comment`) VALUES
 
 
 -- ==============
@@ -13302,11 +13305,12 @@ REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inver
 -- Winter Reveler (15760) - ALREADY SCRIPTED IN ANOTHER ZONE
 -- Midsummer Celebrant (16781) - NSR
 -- Crusty      
-('1824101','18241','2','0','100','1','20','0','120000','120000','11','8599','0','1','1','-106','0','0','0','0','0','0','Crusty - Cast Enrage at 20% HP'),
+('1824101','18241','2','0','100','1','20','0','120000','120000','11','8599','0','1','1','-106','0','0','0','0','0','0','Crusty - Cast Enrage at 20% HP');
 -- Desolace Flame Warden (25894) - NSR
 -- Desolace Flame Keeper (25928) - NSR
 -- Heretic Crystal Guard (26166) - NSR
 
+REPLACE INTO`creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inverse_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action1_type`,`action1_param1`,`action1_param2`,`action1_param3`,`action2_type`,`action2_param1`,`action2_param2`,`action2_param3`,`action3_type`,`action3_param1`,`action3_param2`,`action3_param3`,`comment`) VALUES
 
 
 -- =======
@@ -14839,11 +14843,12 @@ REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inver
 -- Stoma the Ancient (14525) - NSR
 -- Hastat the Ancient (14526) - NSR
 -- Mylini Frostmoon      
-('1531501','15315','2','0','100','0','15','0','0','0','25','0','0','0','1','-47','0','0','0','0','0','0','Mylini Frostmoon - Flee at 15% HP'),
+('1531501','15315','2','0','100','0','15','0','0','0','25','0','0','0','1','-47','0','0','0','0','0','0','Mylini Frostmoon - Flee at 15% HP');
 -- Nafien (15395) - NSR
 -- Elder Nightwind (15603) - NSR
 -- Gorrim (22931) - NSR
 
+REPLACE INTO`creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inverse_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action1_type`,`action1_param1`,`action1_param2`,`action1_param3`,`action2_type`,`action2_param1`,`action2_param2`,`action2_param3`,`action3_type`,`action3_param1`,`action3_param2`,`action3_param3`,`comment`) VALUES
 
 
 -- =======
@@ -17448,7 +17453,7 @@ REPLACE INTO`creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Fury Shelda
 ('1443101','14431','0','0','70','1','2000','2000','13000','13000','11','3589','1','0','0','0','0','0','0','0','0','0','Fury Shelda - Cast Deafening Screech'),
 -- Threggil
-('1443201','14432','0','0','80','1','2000','2000','5000','5000','11','11976','1','0','0','0','0','0','0','0','0','0','Threggil - Cast Strike'),
+('1443201','14432','0','0','80','1','2000','2000','5000','5000','11','11976','1','0','0','0','0','0','0','0','0','0','Threggil - Cast Strike');
 -- Elder Bladeleaf 15595     
 -- Forest Wisp 15624     
 -- Winter Reveler (15760) - ALREADY SCRIPTED IN ANOTHER ZONE
@@ -17475,7 +17480,7 @@ REPLACE INTO`creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Fight Promoter (26760) - npc_innkeeper 
 -- Argent Healer (27305) - NSR   
 
-
+REPLACE INTO`creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inverse_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action1_type`,`action1_param1`,`action1_param2`,`action1_param3`,`action2_type`,`action2_param1`,`action2_param2`,`action2_param3`,`action3_type`,`action3_param1`,`action3_param2`,`action3_param3`,`comment`) VALUES
 
 -- ===========
 -- The Barrens
@@ -19519,9 +19524,9 @@ REPLACE INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inver
 -- Wild Sparrowhawk
 ('2297901','22979','8','0','100','1','39810','-1','1','1','11','39812','6','4','0','0','0','0','0','0','0','0','Wild Sparrowhawk - Cast Captured Sparrowhawk Once Player Affect It With Sparrowhawk Net'),
 -- Deathshadow Agent
-('2339301','23393','0','0','100','1','3000','3000','8000','14000','11','36447','1','0','0','0','0','0','0','0','0','0','Deathshadow Agent - Cast Mind Sear'),
+('2339301','23393','0','0','100','1','3000','3000','8000','14000','11','36447','1','0','0','0','0','0','0','0','0','0','Deathshadow Agent - Cast Mind Sear');
 
-
+REPLACE INTO`creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inverse_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action1_type`,`action1_param1`,`action1_param2`,`action1_param3`,`action2_type`,`action2_param1`,`action2_param2`,`action2_param3`,`action3_type`,`action3_param1`,`action3_param2`,`action3_param3`,`comment`) VALUES
 
 -- ===========
 -- Netherstorm
@@ -22217,9 +22222,10 @@ REPLACE INTO`creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('1920903','19209','0','0','100','5','10200','18100','14100','26200','11','38226','1','0','0','0','0','0','0','0','0','0','Summoned Cabal Deathsworn (Heroic) - Cast Black Cleave'),
 ('1920904','19209','0','0','100','7','10900','28200','12100','22900','11','11428','1','0','0','0','0','0','0','0','0','0','Summoned Cabal Deathsworn - Cast Knockdown'),
 ('1920905','19209','2','0','100','6','25','0','0','0','11','8599','0','0','0','0','0','0','0','0','0','0','Summoned Cabal Deathsworn - Cast Enrage at 25% HP'),
-('1920906','19209','7','0','100','6','0','0','0','0','41','0','0','0','18','33554432','0','0','0','0','0','0','Summoned Cabal Deathsworn - Despawn on Evade'),
+('1920906','19209','7','0','100','6','0','0','0','0','41','0','0','0','18','33554432','0','0','0','0','0','0','Summoned Cabal Deathsworn - Despawn on Evade');
 -- Void Traveler (19226) - npc_void_traveler (Part of Grandmaster Vorpil Scripted Encounter)
 
+REPLACE INTO`creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inverse_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action1_type`,`action1_param1`,`action1_param2`,`action1_param3`,`action2_type`,`action2_param1`,`action2_param2`,`action2_param3`,`action3_type`,`action3_param1`,`action3_param2`,`action3_param3`,`comment`) VALUES
 
 
 -- =================
@@ -22716,7 +22722,7 @@ REPLACE INTO`creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('1011602','10116','1','0','100','3','18000','35000','9000','14000','5','20','0','0','1','-704','-705','-706','0','0','0','0','Slave - Beg Emote and Text Emote'),
 -- Tortured Slave
 ('1011701','10117','1','0','100','3','5000','25000','9000','14000','5','18','0','0','1','-704','-705','-706','0','0','0','0','Tortured Slave - Cry Emote and Random Emote Text OOC'),
-('1011702','10117','1','0','100','3','18000','35000','9000','14000','5','20','0','0','1','-704','-705','-706','0','0','0','0','Tortured Slave - Beg Emote and Text Emote'),
+('1011702','10117','1','0','100','3','18000','35000','9000','14000','5','20','0','0','1','-704','-705','-706','0','0','0','0','Tortured Slave - Beg Emote and Text Emote');
 -- 12473    Arcanite Dragonling    60        
 -- Lokhtos Darkbargainer (12944) - npc_lokhtos_darkbargainer
 -- 15549    Elder Morndeep    60        
@@ -22748,6 +22754,7 @@ REPLACE INTO`creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- 28226    Snaggletooth    1        
 -- 28227    Slobbermouth    1        
 
+REPLACE INTO`creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inverse_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action1_type`,`action1_param1`,`action1_param2`,`action1_param3`,`action2_type`,`action2_param1`,`action2_param2`,`action2_param3`,`action3_type`,`action3_param1`,`action3_param2`,`action3_param3`,`comment`) VALUES
 
 
 -- ==============================================
@@ -24762,8 +24769,9 @@ REPLACE INTO`creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Dark Iron Land Mine (8035) - NSR (Core Handles This as a Pet so Unable To Script Properly)
 -- Sprok (8320) - NSR
 -- Tink Sprocketwhistle (Rough Scripted Data)
-('967601','9676','2','0','100','2','15','0','0','0','25','0','0','0','1','-47','0','0','0','0','0','0','Tink Sprocketwhistle - Flee at 15% HP'),
+('967601','9676','2','0','100','2','15','0','0','0','25','0','0','0','1','-47','0','0','0','0','0','0','Tink Sprocketwhistle - Flee at 15% HP');
 
+REPLACE INTO`creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_inverse_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action1_type`,`action1_param1`,`action1_param2`,`action1_param3`,`action2_type`,`action2_param1`,`action2_param2`,`action2_param3`,`action3_type`,`action3_param1`,`action3_param2`,`action3_param3`,`comment`) VALUES
 
 
 -- ===================================

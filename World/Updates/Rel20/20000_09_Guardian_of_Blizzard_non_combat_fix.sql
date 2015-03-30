@@ -34,7 +34,7 @@ BEGIN
     -- -- -- -- Normal Update / Insert / Delete statements will go here  -- -- -- -- --
 
     -- Guardian of Blizzard non-combat fix (requires ScriptDev script fix)
-    -- -- script fix: https://github.com/mangoszero/server/pull/285
+    -- -- script fix: https://github.com/mangosone/server/pull/64
     UPDATE creature_template SET FactionAlliance = 73, FactionHorde = 73, AIName = '' WHERE Entry = 5764;
     
     -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --

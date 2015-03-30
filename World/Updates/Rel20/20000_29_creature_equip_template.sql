@@ -19,7 +19,7 @@ BEGIN
   SET @cThisRev := ((SELECT column_name FROM information_schema.`COLUMNS` WHERE table_name='db_version' AND table_schema=(SELECT DATABASE() AS thisDB FROM DUAL) AND column_name LIKE 'required%'));
 
   -- Set friendly Version Text
-  SET @cThisVersion = 'MaNGOSZero Database Rev 20000_28';
+  SET @cThisVersion = 'MaNGOSOne Database Rev 20000_29';
 
  
   -- Only Proceed if the old values match
@@ -32,17 +32,6 @@ BEGIN
     PREPARE stmt1 FROM @query;
     EXECUTE stmt1;
     DEALLOCATE PREPARE stmt1;
-    -- The Above block is required for making table changes
-
-    SET @query = 'ALTER TABLE creature_movement DROP COLUMN wpguid;';
-    PREPARE stmt2 FROM @query;
-    EXECUTE stmt2;
-    DEALLOCATE PREPARE stmt2;
-
-   SET @query = 'ALTER TABLE creature_movement_template DROP COLUMN wpguid;';
-    PREPARE stmt3 FROM @query;
-    EXECUTE stmt3;
-    DEALLOCATE PREPARE stmt3;
     -- The Above block is required for making table changes
 
     -- -- -- -- Normal Update / Insert / Delete statements will go here  -- -- -- -- --
