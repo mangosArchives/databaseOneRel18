@@ -6,9 +6,6 @@
 
 TBC World Database
 ===
-DEVELOPMENT BRANCH
-===
- **(Please be aware that this branch is a Work in Progress)**
 
 ### A World Database for TBC Wow
 ----
