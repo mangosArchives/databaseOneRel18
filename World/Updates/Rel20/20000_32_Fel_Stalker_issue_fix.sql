@@ -19,7 +19,7 @@ BEGIN
   SET @cThisRev := ((SELECT column_name FROM information_schema.`COLUMNS` WHERE table_name='db_version' AND table_schema=(SELECT DATABASE() AS thisDB FROM DUAL) AND column_name LIKE 'required%'));
 
   -- Set friendly Version Text
-  SET @cThisVersion = 'MaNGOSOne Database Rev 20000_29';
+  SET @cThisVersion = 'MaNGOSOne Database Rev 20000_32';
 
  
   -- Only Proceed if the old values match
