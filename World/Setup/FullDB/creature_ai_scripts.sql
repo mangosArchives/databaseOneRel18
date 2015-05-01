@@ -20571,7 +20571,8 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (2574404,25744,8,0,100,2,8012,-1,0,0,41,0,0,0,0,0,0,0,0,0,0,0,'Dark Fiend - Despawn on Purge (Rank 2) Hit'),
 (2574405,25744,8,0,100,2,32592,-1,0,0,41,0,0,0,0,0,0,0,0,0,0,0,'Dark Fiend - Despawn on Mass Dispel Hit'),
 (2577207,25772,1,0,100,2,3000,3000,0,0,38,0,0,0,0,0,0,0,0,0,0,0,'Void Sentinal - Send Combat Pulse on OOC Timer'),
-(1498901,14989,11,0,100,2,0,0,0,0,11,24320,0,0,0,0,0,0,0,0,0,0,'Poisonous Cloud - Cast Poisonous Blood on Spawned');
+(1498901,14989,11,0,100,2,0,0,0,0,11,24320,0,0,0,0,0,0,0,0,0,0,'Poisonous Cloud - Cast Poisonous Blood on Spawned'),
+(1879701,18797,4,0,100,6,0,0,0,0,47,0,0,0,0,0,0,0,0,0,0,0,'Tortured skeleton - stand on aggro');
 /*!40000 ALTER TABLE `creature_ai_scripts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
